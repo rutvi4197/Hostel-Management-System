@@ -1,0 +1,40 @@
+		.graphcontainer{
+			margin-top: 100px;
+			display:flex;
+			flex-direction: column;
+			/*background-color: grey;*/
+
+		}
+
+		.graphcontainer>bargraph{
+			/*background-color: lightgrey;*/
+			display: flex;	 	
+		}
+		#att{
+			width: 350px;
+			/*margin-left: auto;*/
+			margin-right: 10px;
+		}
+		#in-out-entry{
+			width: 350px;
+			margin-left: 400px;
+		}
+
+		#piechart{
+			margin-top: 400px;
+			margin-left: 150px;
+		}
+
+		#complains{
+			margin-top: 100px;
+			margin-left: 50px;
+			margin-right:50px;
+			height:750px;
+			margin-bottom: 100px;
+			background-color: #dee8f9;
+		}
+
+		#complain td{
+			text-align: center;
+			margin-top: 10px;
+		}

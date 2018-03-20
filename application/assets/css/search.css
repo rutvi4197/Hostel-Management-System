@@ -1,0 +1,51 @@
+#searchId table{
+	align:center;
+	margin:3% 30%; 
+	position:relative;
+	
+}
+#searchId td{
+	margin:1%;
+}
+.searchDetails{
+	position:relative;
+	border:1px solid #3333ff;
+	border-width:4px;  
+	border-style:groove;
+	margin:0 15%;
+	padding:2%;
+
+}
+
+@media screen and (max-width:1000px){
+
+#searchId td{
+	display:flex;
+	flex-direction:column;	
+}
+.searchDetails tr{
+		display:flex;
+	flex-direction:column;
+}
+
+}
+@media screen and (max-width:400px){
+
+.searchDetails{
+	margin:0;
+}
+#searchId table{
+	margin:0;
+}
+#searchId td{
+	display:flex;
+	flex-direction:column;	
+	
+}
+.searchDetails tr{
+		display:flex;
+	flex-direction:column;
+}
+
+}
+
