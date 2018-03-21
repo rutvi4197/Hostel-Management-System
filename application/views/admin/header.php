@@ -4,9 +4,9 @@
   <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
   <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
 
-	<div class="row">
-    <div class="col-xs-4 col-sm-4 col-md-2"><a href="home.php"><img class="logo" src="image/Logo.jpg"></a></div>
-    <div class="col-xs-8 col-sm-8 col-md-10"><a href="home.php"><img class="logoText" src="image/logoText.jpg"></a></div>
+<div class="row">
+    <div class="col-xs-3 col-sm-2 col-md-1"><a href="home.php"><img class="logo" style="width:auto;height:100px;" src="image/Logo.jpg"></a></div>
+    <div class="col-xs-9 col-sm-10 col-md-11"><a href="home.php"><img class="logoText" src="image/logoText.jpg"></a></div>
 </div>
 
 <nav class="navbar navbar-default" role="navigation">
@@ -94,8 +94,4 @@
       </ul>
   </div><!-- /.navbar-collapse -->
 </nav>  
-
-
-
-
 
