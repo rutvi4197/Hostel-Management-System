@@ -1,29 +1,101 @@
 
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/header.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/attendence.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/footer.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/form.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/header.css">
+	<link  href="<?php echo base_url(); ?>bootstrapcss/bootstrap.min.css" rel="stylesheet">
+  <link  href="<?php echo base_url(); ?>bootstrapcss/font-awesome.min.css"/ rel="stylesheet">
+  <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
+  <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
 
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/home.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/index.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/login.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/registration.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/search.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/table.css">
-		
+	<div class="row">
+    <div class="col-xs-4 col-sm-4 col-md-2"><a href="home.php"><img class="logo" src="image/Logo.jpg"></a></div>
+    <div class="col-xs-8 col-sm-8 col-md-10"><a href="home.php"><img class="logoText" src="image/logoText.jpg"></a></div>
+</div>
 
-	<div class="header">
-		<span><a href="home.php"><img class="logo" src="<?php echo base_url(); ?>image/Logo.jpg"></a ></span>
-		<span><a href="home.php"><img class="logoText" src="<?php echo base_url(); ?>image/logoText.jpg"><img class="logoText2" src="<?php echo base_url(); ?>image/logotext2.jpg"></a ></span>
-	</div>	
-	<div class="menuHeader"><b>
-		<a href="attendence.php">Attendence</a>
-		<a href="complain.php">Complain</a>
-		<a href="guest.php">Guest</a>
-		<a href="service_in.php">Services</a>
-		<a href="courier.php">Courier</a>
-		<a href="home.html">Logout</a>
-	</div>
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <!--<a class="navbar-brand" href="#">Brand</a>-->
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+       <li class="active"><a href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-home"></span>HOME</a></li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="fa fa-500px"></span>Attendence<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Daily Attendence</a></li>
+            <li><a href="#">IN/OUT Entry</a></li> 
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-info-sign"></span>Complain<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">View Complain</a></li>
+            <li><a href="#">Status of Complain</a></li> 
+          </ul>
+        </li>
+
+         <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-info-sign"></span>Guest<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Add Guest</a></li>
+            <li><a href="#">View Guest</a></li> 
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-wrench"></span>Serivces<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Add Service</a></li>
+            <li><a href="#">View Service</a></li> 
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-briefcase"></span>Courier<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Add Courier</a></li>
+            <li><a href="#">View Courier</a></li> 
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-user"></span>Student<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Room Details</a></li>
+            <li><a href="#">Student Details</a></li> 
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-stats"></span>Add Attendence<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Daily Attendance</a></li>
+            <li><a href="#">IN/OUT Entry</a></li> 
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i style="padding-right:5px;" class="fa fa-users"></i>Admin<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Add Staff</a></li>
+            <li><a href="#">View Staff</a></li> 
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+      </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>  
+
+
+
+
 

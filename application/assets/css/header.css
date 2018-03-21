@@ -1,66 +1,50 @@
 .header{
-	background-color:white;
-	height:120px;
+  background-color:white;
+  height:120px;
 }
 .logo{
-	width:auto;
-	height:95%;
+  width:auto;
+  height:95%;
 }
 .logoText{
-	width:auto;	
-	
+  width:auto; 
+  
 }
 .logoText2{
-		display:none;
+    display:none;
+}
+@media screen and (max-width:600px){
+  .header{
+    height:100px;
+  }
+  
+  }
+@media screen and (max-width:400px){
+  .header{
+    height:100px;
+  }
+  .logo{
+    margin-left:30%;
+    margin-right:25%;
+  }
+  .logoText{
+    display:none;
+  }
+  
+  .logoText2{
+    display:block;
+    margin-left:18%;
+    margin-right:18%;
+  }
 }
 .menuHeader{
 
-	width:100%;
-	background-color:#dee8f9;		
-	padding-top:1%;
-	padding-bottom:1%;
+ background-color:#dee8f9;   
 }
-.menuHeader a{
-	text-decoration:none;
-	color:#011028;
-	margin:3%;	
-	padding:2%;	
-}	
-@media screen and (max-width:600px){
-	.header{
-		height:100px;
-	}
-	.menuHeader{
-		margin-top:100px;
+.menuHeader a
+{
+  text-decoration:none;
+  color:#011028;
+}
 
-	}
-	
-}
-@media screen and (max-width:400px){
-	.header{
-		height:100px;
-	}
-	.logo{
-		margin-left:30%;
-		margin-right:25%;
-	}
-	.logoText{
-		display:none;
-	}
-	
-	.logoText2{
-		display:block;
-		margin-left:18%;
-		margin-right:18%;
-	}
-	.menuHeader{
-		margin-top:150px;
-
-	}
-	
-	.menuHeader a{
-		display:flex;
-		flex-direction:column;
-		text-decoration:none;
-	}		
-}
+.navbar-nav > li > .dropdown-menu { background-color: #eee;  }
