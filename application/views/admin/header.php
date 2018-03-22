@@ -9,7 +9,7 @@
     <div class="col-xs-9 col-sm-10 col-md-11"><a href="home.php"><img class="logoText" src="image/logoText.jpg"></a></div>
 </div>
 
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default" style="background-color: #cbebf6" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -24,7 +24,7 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-       <li class="active"><a href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-home"></span>HOME</a></li>
+       <li ><a href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-home"></span>HOME</a></li>
 
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="fa fa-500px"></span>Attendence<span class="caret"></span></a>
