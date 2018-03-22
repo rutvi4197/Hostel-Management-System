@@ -8,9 +8,8 @@
   display: block;
 }
 .footer {
-  margin-bottom: 0px;
   background: #EDEFF1;
-  height:100px;
+  height:auto;
   padding-bottom: 30px;
   position: relative;
   width: 100%;
