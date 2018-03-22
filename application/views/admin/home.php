@@ -141,7 +141,3 @@ include_once('header.php');
 			<div id="piechart"></div> 
 	</div>
 	</div>
-
-	
- </body>
-</html>

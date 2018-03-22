@@ -3,6 +3,8 @@
   <link  href="<?php echo base_url(); ?>bootstrapcss/font-awesome.min.css" rel="stylesheet">
   <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
   <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
+  <link href="<?php echo base_url(); ?>css/footer.css" rel="stylesheet" type="text/css" >
+
 
 <div class="row">
     <div class="col-xs-3 col-sm-2 col-md-1"><a href="home.php"><img class="logo" style="width:auto;height:100px;" src="image/Logo.jpg"></a></div>
