@@ -5,7 +5,7 @@
   <div class="col-sm-2 col-md-2">
   </div>    
   <div class="col-sm-8 col-md-8">
-   <center> <label for="addCourier"><h3><b>Add Service</b></h3></label></center> 
+   <center> <label for="addstaff"><h3><b>Add Staff</b></h3></label></center> 
    </div>
   <div class="col-sm-2 col-md-2">
   </div>    

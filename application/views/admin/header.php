@@ -46,7 +46,7 @@
          <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-info-sign"></span>Guest<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Add Guest</a></li>
+            <li><a href="add_guest.php">Add Guest</a></li>
             <li><a href="#">View Guest</a></li> 
           </ul>
         </li>
