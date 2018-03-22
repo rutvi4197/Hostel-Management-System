@@ -1,6 +1,6 @@
 
 	<link  href="<?php echo base_url(); ?>bootstrapcss/bootstrap.min.css" rel="stylesheet">
-  <link  href="<?php echo base_url(); ?>bootstrapcss/font-awesome.min.css"/ rel="stylesheet">
+  <link  href="<?php echo base_url(); ?>bootstrapcss/font-awesome.min.css" rel="stylesheet">
   <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
   <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
 

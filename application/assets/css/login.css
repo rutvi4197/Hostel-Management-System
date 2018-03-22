@@ -1,71 +1,21 @@
-	* {
-    box-sizing: border-box;
-}
-
-input[type=text], input[type=password], select, textarea {
-    width: 80%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-}
-
-label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-}
-
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 6px;
-    float: right;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin: auto;
-    width:60%;
-    margin-top: 7px;
-}
-
-.col-25 {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-}
-
-.col-75 {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-@media screen and (max-width: 600px) {
-    .col-25, .col-75 {
-        width: 100%;
-        margin-top:0;
-    }
-    input[type=submit]
-    {
-    	width: 100%;
-    	margin-top: 6px;
-    }
+body { background:"#444";font-family: 'Open Sans', sans-serif;}
+.login { width: 400px; margin:100px auto;font-size: 16px;}
+/* Reset top and bottom margins from certain elements */
+.login-header,.login p { margin-top: 0;margin-bottom: 0;}
+/* The triangle form is achieved by a CSS hack */
+.login-triangle {width: 0;margin-right: auto;margin-left: auto;border: 12px solid transparent;border-bottom-color: #28d;}
+.login-header {background:#84bffb;padding: 20px;font-size: 1.4em;font-weight: normal;text-align: center;text-transform: uppercase;color:#000000;}
+.login-container {background: #ebebeb;padding: 12px;}
+/* Every row inside .login-container is defined with p tags */
+.login p {padding: 12px;}
+.login input {box-sizing: border-box;display: block;width: 100%;border-width: 1px;border-style: solid;padding: 16px;outline: 0;font-family: inherit;font-size: 0.95em;}
+.login input[type="email"],.login input[type="password"] {background: #fff;border-color: #bbb;color: #555;}
+/* Text fields' focus effect */
+.login input[type="email"]:focus, .login input[type="password"]:focus {  border-color: #888;}
+.login input[type="submit"] {background:#bbb;color: #000000;cursor: pointer;}
+.login input[type="submit"]:hover {background: #17c;}
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {border-color:#84bffb;}
+@media all and (max-width:450px){
+.login {width: 95%;}
 }
