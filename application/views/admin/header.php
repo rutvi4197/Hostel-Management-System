@@ -7,8 +7,8 @@
 
 
 <div class="row">
-    <div class="col-xs-3 col-sm-2 col-md-1"><a href="home.php"><img class="logo" style="width:auto;height:100px;" src="image/Logo.jpg"></a></div>
-    <div class="col-xs-9 col-sm-10 col-md-11"><a href="home.php"><img class="logoText" src="image/logoText.jpg"></a></div>
+    <div class="col-xs-3 col-sm-2 col-md-1"><a href="<?php echo site_url('home'); ?>"><img class="logo" style="width:auto;height:100px;" src="<?php echo base_url(); ?>image/Logo.jpg"></a></div>
+    <div class="col-xs-9 col-sm-10 col-md-11"><a href="home.php"><img class="logoText" src="<?php echo base_url(); ?>image/logoText.jpg"></a></div>
 </div>
 
 <nav class="navbar navbar-default" style="background-color: #cbebf6" role="navigation">
@@ -26,19 +26,19 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-       <li ><a href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-home"></span>HOME</a></li>
+       <li ><a href="<?php echo site_url('home'); ?>"><span style="padding-right:5px;" class="glyphicon glyphicon-home"></span>HOME</a></li>
 
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="fa fa-500px"></span>Attendence<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Daily Attendence</a></li>
-            <li><a href="#">IN/OUT Entry</a></li> 
+            <li><a href="<?php echo site_url('attendence'); ?>">Daily Attendence</a></li>
+            <li><a href="<?php echo site_url('attendence/inoutentry'); ?>"<?php echo site_url('orderhistory'); ?>>IN/OUT Entry</a></li> 
           </ul>
         </li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-info-sign"></span>Complain<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">View Complain</a></li>
+            <li><a href="<?php echo site_url('complain/viewcomplain'); ?>">View Complain</a></li>
             <li><a href="#">Status of Complain</a></li> 
           </ul>
         </li>
@@ -46,24 +46,24 @@
          <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-info-sign"></span>Guest<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="add_guest.php">Add Guest</a></li>
-            <li><a href="#">View Guest</a></li> 
+            <li><a href="<?php echo site_url('guest/add'); ?>">Add Guest</a></li>
+            <li><a href="<?php echo site_url('guest/view'); ?>">View Guest</a></li> 
           </ul>
         </li>
 
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-wrench"></span>Serivces<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Add Service</a></li>
-            <li><a href="#">View Service</a></li> 
+            <li><a href="<?php echo site_url('service/add'); ?>">Add Service</a></li>
+            <li><a href="<?php echo site_url('service/view'); ?>">View Service</a></li> 
           </ul>
         </li>
 
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-briefcase"></span>Courier<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Add Courier</a></li>
-            <li><a href="#">View Courier</a></li> 
+            <li><a href="<?php echo site_url('courier/add'); ?>">Add Courier</a></li>
+            <li><a href<?php echo site_url('courier/view'); ?>">View Courier</a></li> 
           </ul>
         </li>
 

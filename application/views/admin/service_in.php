@@ -1,6 +1,6 @@
 <?php include('header.php');?>
 
-<form>
+<form action="<?php echo site_url('service/addservice') ?>" method="post">
 <div class="row" style="margin-top: 1%;"> 
   <div class="col-sm-2 col-md-2">
   </div>    
@@ -19,13 +19,13 @@
     <div class="form-group row">
         <label for="name" class="col-sm-4 col-form-label">Name</label>
         <div class="col-sm-8">
-          <input class="form-control" id="name" type="text">
+          <input class="form-control" name="name" type="text">
         </div>
     </div>
     <div class="form-group row">
       <label for="Purpose" class="col-sm-4 col-form-label">Purpose</label>
       <div class="col-sm-8">
-        <input class="form-control" id="Purpose" type="text">
+        <input class="form-control" name="purpose" type="text">
       </div>
     </div>
 

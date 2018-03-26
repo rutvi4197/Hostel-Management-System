@@ -25,9 +25,9 @@
     <div class="row">
         <div class="login">
         <h2 class="login-header">Log in</h2>
-        <form class="login-container">
-        <p><input type="email" placeholder="Email"></p>
-        <p><input type="password" placeholder="Password"></p>
+        <form class="login-container" action="<?php echo site_url('login/loginverification') ?>" method="post">
+        <p><input type="text" placeholder="ID" name="id"></p>
+        <p><input type="password" placeholder="Password" name="password"></p>
         <p><input type="submit" value="Log in"></p>
         </form>
         </div>
