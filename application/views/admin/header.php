@@ -4,6 +4,7 @@
   <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
   <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
   <link href="<?php echo base_url(); ?>css/footer.css" rel="stylesheet" type="text/css" >
+  
 
 
 <div class="row">
@@ -31,8 +32,8 @@
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="fa fa-500px"></span>Attendence<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="<?php echo site_url('attendence'); ?>">Daily Attendence</a></li>
-            <li><a href="<?php echo site_url('attendence/inoutentry'); ?>"<?php echo site_url('orderhistory'); ?>>IN/OUT Entry</a></li> 
+            <li><a href="<?php echo site_url('attendence'); ?>">Absent Student Record</a></li>
+            <li><a href="<?php echo site_url('attendence/inoutentry'); ?>"<?php echo site_url('orderhistory'); ?>>IN/OUT Entry Record</a></li> 
           </ul>
         </li>
         <li class="dropdown">

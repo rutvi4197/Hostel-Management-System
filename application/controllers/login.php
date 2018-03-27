@@ -24,8 +24,10 @@ class Login extends CI_Controller {
 		}
 	}
 	 public function logout()
-	{	$this->load->model('stafflogin');
-		if($this->stafflogin->dologout($id,$password))
+	{
+		$id=$this->session->userdata('id');
+		$this->load->model('stafflogin');
+		if($this->stafflogin->dologout($id))
 		{
 				$this->session->unset_userdata('id');
 				redirect('login');

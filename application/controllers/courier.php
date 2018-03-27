@@ -12,9 +12,10 @@ class Courier extends CI_Controller {
 
 	public function view()
 	{
+		$this->load->model('courierrecord');
+		$arr['courier']=$this->courierrecord->viewcourier();
 
-
-		$this->load->view('admin/courier');
+		$this->load->view('admin/courier',$arr);
 	}
 	public function addcourier()
 	{
@@ -28,7 +29,7 @@ class Courier extends CI_Controller {
 		$staffid=$this->session->userdata('id');
 		$this->load->model('Courierrecord');
 
-		if($this->Courierrecord->addcourierentry($intime,$date,$studentid,$studentRoomNo,$staffid))
+		if($this->Courierrecord->addcourierentry($intime,$date,$studentid,$courierCompany,$studentRoomNo,$staffid))
 		{
 				redirect('courier/view');
 		}

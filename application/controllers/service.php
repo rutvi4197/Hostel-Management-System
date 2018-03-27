@@ -12,9 +12,10 @@ class Service extends CI_Controller {
 
 	public function view()
 	{
+		$this->load->model('servicerecord');
+		$arr['service']=$this->servicerecord->viewservice();
 
-
-		$this->load->view('admin/service_out');
+		$this->load->view('admin/service_out',$arr);
 	}
 	public function addservice()
 	{

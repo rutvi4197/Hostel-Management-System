@@ -1,53 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>HOR WOMEN</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Attendance</title>
+<script  src="<?php echo base_url(); ?>js/jquery-1.12.3.js" type="text/javascript"></script> 
+  <link rel="Stylesheet" href="<?php echo base_url(); ?>bootstrapcss/jquery.dataTables.min.css" /> 
+<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-1.12.3.js"></script>
 </head>
-<body>
-<?php include('header.php');?>
-<form action="" method="post">  
-<div class="row" style="margin-top: 10%;"> 
-  <div class="col-sm-2 col-md-2">
-  </div>    
-  <div class="col-sm-8 col-md-8">
-   <center> <label for="markStudentEntry"><h3>Mark IN-OUT Entry</h3></label></center> 
-   </div>
-  <div class="col-sm-2 col-md-2">
-  </div>    
-</div>
-<div class="row" style="margin-top: 1%;"> 
-	<div class="col-sm-3 col-md-3">
-	</div>		
-	<div class="col-sm-6 col-md-6" style="display:flex;justify-content:center;">
-		<label class="col-sm-2 col-form-label">Student ID</label>
-		<div class="col-sm-6">
-			<input type="text"  class="form-control" name="studentID" placeholder="Student ID">
-		</div>
-		
-	</div>
-	<div class="col-sm-3 col-md-3">
-		
-	</div>		
-</div>
-<div class="row">
-	<div class="col-sm-4 col-md-4">
-	</div>		
-	<div class="col-sm-6 col-md-6" style="display:flex;justify-content:center;">
-	
-		<div class="col-sm-7">
-		<a href="<?php echo site_url('addattendence/doout') ?>"><button type="submit" class="btn btn-primary mb-2 col-sm-4"  style="margin-top: 7%;margin-right: 8%">Out Entry</button></a>
-		<button type="submit" class="btn btn-primary mb-2 col-sm-4" style="margin-top: 7%" >In Entry</button>
-		</div>
-		
-	</div>
-		
-		
-</div>
- 
- 
+	<body>
+		<!-- header -->
+<?php
+include('header.php');
 
-</form>
+ ?>
+ <link rel="Stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+
+
+   <script type="text/javascript">
+            $(function () {
+
+            $('#dataTable').dataTable({
+               // "bJQueryUI": true,
+                "sPaginationType": "full_numbers",
+        //"pageLength": 1
+            });
+
+            $('#chk-all').click(function () {
+                if ($(this).is(':checked')) {
+                    $('#responsiveTable').find('.chk-row').each(function () {
+                        $(this).prop('checked', true);
+                        $(this).parent().parent().parent().addClass('selected');
+                    });
+                }
+                else {
+                    $('#responsiveTable').find('.chk-row').each(function () {
+                        $(this).prop('checked', false);
+                        $(this).parent().parent().parent().removeClass('selected');
+                    });
+                }
+            });
+        });
+    </script>
+   
+			<div class="page-container">
+			<div class="left-content">
+				<div class="inner-content">
+				
+					<div class="outter-wp">
+						<div class="sub-heard-part"></div>
+							<div class="graph-visual tables-main">
+								<h3 class="inner-tittle two"><center><font size="10" color="#000051">Out Entry Student details</font></center></h3>
+									<div class="graph">
+										<div class="tables" >		
+									<br>	
+				<table class="table table-bordered" id="dataTable">
+				
+				<thead>
+				<tr class="active" style="font-size: 3;color:#000051 ">
+					<th><b>Student Id</b></th>
+					<th><b>Student Name</b></th>
+					<th><b>Room No</b></th>
+					<th><b>Out Date</b></th>
+					<th><b>Place</b></th>
+					<th><b>Name of relative</b></th>
+					<th><b>Contact No</b></th>
+					<th><b>In Entry</b></th>
+
+					
+				</tr>
+				</thead>
+				<tbody>
+			 <?php 
+               foreach($outstudent as $outstudent):
+               
+              ?>        
+					<tr>
+					<td><?php echo $outstudent->Student_id  ?></td>
+					<td><?php echo $outstudent->First_name  ?></td>
+					<td><?php echo $outstudent->Room_no  ?></td>
+					<td><?php echo $outstudent->Out_date ?></td>
+					<td><?php echo $outstudent->Place  ?></td>
+					<td><?php echo $outstudent->Name_of_relative  ?></td>
+					<td><?php echo $outstudent->Contact_no  ?></td>
+					<td><a href="#"><button type="button" class="form-control btn btn-primary" >In Entry</button></a></td>
+					
+					</tr>
+
+					  <?php endforeach;?>
+                
+			</tbody>
+			</table> 
+			
+										</div>
+									</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
 </body>
+
+	
 </html>
