@@ -39,24 +39,7 @@ class Admin extends CI_Controller {
 
 	}
 
-	public function doout()
-	{
-		$studentid=$this->input->post('studentid');
-		date_default_timezone_set('Asia/Kolkata');
-		$date=date('d/m/Y');
-
-		$this->load->model('attendencerecord');
-
-		if($this->attendencerecord->attendenceentry($studentid,$date))
-		{
-			
-				redirect('home');
-		}
-		else {
-			$this->session->set_flashdata('attendeceerror','error');
-			redirect('addattendence/dailyentry');
-		}
-	}
+	
 	
 	
 }
