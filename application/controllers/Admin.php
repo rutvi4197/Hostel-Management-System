@@ -5,17 +5,25 @@ class Admin extends CI_Controller {
 	
 	public function staff()
 	{
-		$this->load->view('admin/add_attendance');
+		$this->load->view('admin/add_staff');
 	}
 	public function addstaff()
 	{
-		$studentid=$this->input->post('studentid');
-		date_default_timezone_set('Asia/Kolkata');
-		$date=date('d/m/Y');
+		$staffid=$this->input->post('staffid');
+		$password=$this->input->post('password');
+		$staffName=$this->input->post('staffName');
+		$staffContact=$this->input->post('staffContact');
+		$staffAddress=$this->input->post('staffAddress');
+		$staffAddress2=$this->input->post('staffAddress2');
+		$city=$this->input->post('city');
 
-		$this->load->model('attendencerecord');
 
-		if($this->attendencerecord->attendenceentry($studentid,$date))
+
+
+		
+		$this->load->model('adminrecord');
+
+		if($this->adminrecord->adminentry($staffid,$password,$staffName,$staffContact,$staffAddress,$staffAddress2,$city))
 		{
 				redirect('home');
 		}

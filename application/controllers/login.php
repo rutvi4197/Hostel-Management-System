@@ -23,5 +23,19 @@ class Login extends CI_Controller {
 			redirect('login');
 		}
 	}
+	 public function logout()
+	{	$this->load->model('stafflogin');
+		if($this->stafflogin->dologout($id,$password))
+		{
+				$this->session->unset_userdata('id');
+				redirect('login');
+		}
+		else {
+			$this->session->set_flashdata('loginerror','error');
+			redirect('home');
+		}
+		
+	}
+	
 	
 }

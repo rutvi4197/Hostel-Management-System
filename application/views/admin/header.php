@@ -8,7 +8,7 @@
 
 <div class="row">
     <div class="col-xs-3 col-sm-2 col-md-1"><a href="<?php echo site_url('home'); ?>"><img class="logo" style="width:auto;height:100px;" src="<?php echo base_url(); ?>image/Logo.jpg"></a></div>
-    <div class="col-xs-9 col-sm-10 col-md-11"><a href="home.php"><img class="logoText" src="<?php echo base_url(); ?>image/logoText.jpg"></a></div>
+    <div class="col-xs-9 col-sm-10 col-md-11"><a href="<?php echo site_url('home'); ?>"><img class="logoText" src="<?php echo base_url(); ?>image/logoText.jpg"></a></div>
 </div>
 
 <nav class="navbar navbar-default" style="background-color: #cbebf6" role="navigation">
@@ -87,13 +87,13 @@
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i style="padding-right:5px;" class="fa fa-users"></i>Admin<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="<?php echo site_url('admin/staff') ?>">Add Staff</a></li>
-            <li><a href="<?php echo site_url('admin/view') ?>">View Staff</a></li> 
+            <li><a href="<?php echo site_url('admin/staff'); ?>">Add Staff</a></li>
+            <li><a href="<?php echo site_url('admin/view'); ?>">View Staff</a></li> 
           </ul>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+        <li><a href="<?php echo site_url('login/logout'); ?>"><span style="padding-right:5px;" class="glyphicon glyphicon-log-out"></span>Logout</a></li>
       </ul>
   </div><!-- /.navbar-collapse -->
 </nav>  
