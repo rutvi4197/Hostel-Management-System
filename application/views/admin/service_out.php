@@ -1,6 +1,5 @@
-<?php
-include('header.php');
-?>
+
+
 <!DOCTYPE HTML>
 <HTML>
 	<head>
@@ -26,6 +25,9 @@ tr:nth-child(even){background-color: #f2f2f2}
 	    </style>
 	</head>
 	<body>
+    <?php
+include('header.php');
+?>
 	<div id="att" class="row" style="margin-top: 50px;">
       <center>
         <h3>Heading</h3>
@@ -50,4 +52,6 @@ tr:nth-child(even){background-color: #f2f2f2}
     </tr>
 </table>
 	</div>
+</body>
+</HTML>
 

@@ -12,7 +12,7 @@ class Guestrecord extends CI_Model
 	}
 	public function viewguest()
 	{
-		$q=$this->db->query("select * from guest order by Guest_id desc")
+		$q=$this->db->query("select * from guest order by Guest_id desc");
 		return $q->result();
 	}
 }

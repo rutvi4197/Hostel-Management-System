@@ -63,7 +63,7 @@
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-briefcase"></span>Courier<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo site_url('courier/add'); ?>">Add Courier</a></li>
-            <li><a href<?php echo site_url('courier/view'); ?>">View Courier</a></li> 
+            <li><a href="<?php echo site_url('courier/view'); ?>">View Courier</a></li> 
           </ul>
         </li>
 
@@ -74,20 +74,21 @@
             <li><a href="#">Student Details</a></li> 
           </ul>
         </li>
+          
 
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-stats"></span>Add Attendence<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Daily Attendance</a></li>
-            <li><a href="#">IN/OUT Entry</a></li> 
+            <li><a href="<?php echo site_url('addattendence/dailyentry') ?>">Daily Attendance</a></li>
+            <li><a href="<?php echo site_url('addattendence/inout') ?>">IN/OUT Entry</a></li> 
           </ul>
         </li>
 
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i style="padding-right:5px;" class="fa fa-users"></i>Admin<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Add Staff</a></li>
-            <li><a href="#">View Staff</a></li> 
+            <li><a href="<?php echo site_url('admin/staff') ?>">Add Staff</a></li>
+            <li><a href="<?php echo site_url('admin/view') ?>">View Staff</a></li> 
           </ul>
         </li>
       </ul>

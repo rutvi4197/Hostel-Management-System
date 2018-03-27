@@ -1,6 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HOR WOMEN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
 <?php include('header.php');?>
 
-<form>
 <div class="row" style="margin-top: 1%;"> 
   <div class="col-sm-2 col-md-2">
   </div>    
@@ -10,6 +19,7 @@
   <div class="col-sm-2 col-md-2">
   </div>    
 </div>
+<form action="<?php echo site_url('courier/addcourier') ?>" method="post">   
 <div class="row" style="margin-top: 1%;"> 
 	<div class="col-sm-3 col-md-3">
 	</div>		
@@ -19,19 +29,19 @@
 		<div class="form-group row">
 				<label for="studentID" class="col-sm-4 col-form-label">Student ID</label>
 				<div class="col-sm-8">
-					<input class="form-control" id="studentID" type="text">
+					<input class="form-control" name="studentid" type="text">
 				</div>
 		</div>
 		<div class="form-group row">
 			<label for="studentRoomNo" class="col-sm-4 col-form-label">Room NO</label>
 			<div class="col-sm-8">
-				<input class="form-control" id="studentRoomNo" type="text">
+				<input class="form-control" name="studentroomno" type="text">
 			</div>
 		</div>
 		<div class="form-group row">
 			<label for="courierCompany" class="col-sm-4 col-form-label">Courier Company</label>
 			<div class="col-sm-8">
-				<input class="form-control" id="courierCompany" type="text">
+				<input class="form-control" name="courierCompany" type="text">
 			</div>
 		</div>
 		<div class="form-group row">
@@ -52,5 +62,6 @@
  
 
 </form>
-
+</body>
+</html>
 
