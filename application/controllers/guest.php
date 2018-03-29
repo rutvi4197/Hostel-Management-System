@@ -12,9 +12,10 @@ class Guest extends CI_Controller {
 
 	public function view()
 	{
+ 	$this->load->model('guestrecord');
+		$arr['guest']=$this->guestrecord->viewguest();
 
-
-		$this->load->view('admin/guest');
+		$this->load->view('admin/guest',$arr);
 	}
 	public function addguest()
 	{

@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HOR WOMEN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
 <?php include('header.php');?>
 
 <form action="<?php echo site_url('service/addservice') ?>" method="post">
@@ -47,5 +55,7 @@
  
 
 </form>
+</body>
+</html>
 
 

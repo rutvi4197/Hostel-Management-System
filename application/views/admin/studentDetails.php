@@ -52,7 +52,7 @@ include('header.php');
           <div class="outter-wp">
             <div class="sub-heard-part"></div>
               <div class="graph-visual tables-main">
-                <h3 class="inner-tittle two"><center><font size="10" color="#000051">Courier Details</font></center></h3>
+                <h3 class="inner-tittle two"><center><font size="10" color="#000051">Student Details</font></center></h3>
                   <div class="graph">
                     <div class="tables" >   
                   <br>  
@@ -62,10 +62,12 @@ include('header.php');
         <tr class="active" style="font-size: 3;color:#000051 ">
           <th><b>Student ID</b></th>
           <th><b>Student Name</b></th>
-          <th><b>Courier Company</b></th>
-          <th><b>Received Time</b></th>
-          <th><b>Collected Time</b></th>
-          <th><b>Staff Name</b></th>
+          <th><b>Room No</b></th>
+          <th><b>Course</b></th>
+          <th><b>Contact No</b></th>
+          <th><b>Parent Contact</b></th>
+          <th><b>City Name</b></th>
+          <th><b>Blood group</b></th>
       
          
 
@@ -74,27 +76,26 @@ include('header.php');
         </thead>
         <tbody>
        <?php 
-               foreach($courier as $courier):
+               foreach($student as $student):
                
               ?>        
           <tr>
-          <td><?php echo $courier->Student_id;  ?></td>
-          <td><?php echo $courier->First_name;  ?></td>
-          <td><?php echo $courier->Courier_company;  ?></td>
-          <td><?php echo $courier->In_date.' &nbsp;'.$courier->In_time;   ?></td>
-          <td><?php if($courier->Out_date=="null")
-                  echo '<a href=""><button class="form-control btn btn-primary" >Check Out</button></a>';
-                  else{
-                    echo $courier->Out_date.' &nbsp;&nbsp;'.$courier->Out_time;
-                  }       
+          <td><?php echo $student->Student_id;  ?></td>
+          <td><?php echo $student->First_name.' '.$student->Last_name;  ?></td>
+          <td><?php echo $student->Room_no;  ?></td>
+          <td><?php echo $student->Course;   ?></td>
+          <td><?php echo $student->Contact_no;  ?></td>
+          <td><?php echo $student->Parent_no;  ?></td>
+          <td><?php echo $student->City_name;  ?></td>
+          <td><?php echo $student->Blood_group;  ?></td>
 
-
-           ?></td>
-          <td><?php echo $courier->Staff_name;  ?></td>
          
           
           
           </tr>
+              </div>
+          </div>
+        </div>
 
             <?php endforeach;?>
                 
@@ -103,9 +104,6 @@ include('header.php');
       
                     </div>
                   </div>
-              </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
