@@ -100,7 +100,7 @@ include('header.php');
 				</div>
 			</div>
 		</div>
-<<<<<<< HEAD
+
 		<button type="submit" class="btn btn-primary mb-1 col-sm-2" >Mark</button>
 	</div>
 	<div class="col-sm-3 col-md-3">
@@ -109,10 +109,9 @@ include('header.php');
 </div>
 
 </form>
-=======
-	
+
 </body>
 
 	
 </html>
->>>>>>> a33a0933819fe4918ceb53a5b42800a0f615ff00
+
