@@ -13,7 +13,7 @@
     <div class="col-xs-9 col-sm-10 col-md-11"><a href="<?php echo site_url('home'); ?>"><img class="logoText" src="<?php echo base_url(); ?>image/logoText.jpg"></a></div>
 </div>
 
-<nav class="navbar navbar-default" style="background-color: #cbebf6" role="navigation">
+<nav class="navbar navbar-default" style="background-color: #cbebf6;" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
