@@ -29,19 +29,19 @@
 		<div class="form-group row">
 				<label for="studentID" class="col-sm-4 col-form-label">Student ID</label>
 				<div class="col-sm-8">
-					<input class="form-control" name="studentid" type="text">
+					<input class="form-control" name="studentid" type="text" pattern="[0-9]{9}" title="Nine digit Student ID" placeholder="Student ID" required>
 				</div>
 		</div>
 		<div class="form-group row">
 			<label for="studentRoomNo" class="col-sm-4 col-form-label">Room NO</label>
 			<div class="col-sm-8">
-				<input class="form-control" name="studentroomno" type="text">
+				<input class="form-control" name="studentroomno" type="text" pattern="[J-Kj-k]{1}[0-9]{3}" placeholder="Room Number" title="Room Number e.g.(k306)" required>
 			</div>
 		</div>
 		<div class="form-group row">
 			<label for="courierCompany" class="col-sm-4 col-form-label">Courier Company</label>
 			<div class="col-sm-8">
-				<input class="form-control" name="courierCompany" type="text">
+				<input class="form-control" name="courierCompany" type="text" placeholder="Name of Courier Company" required>
 			</div>
 		</div>
 		<div class="form-group row">

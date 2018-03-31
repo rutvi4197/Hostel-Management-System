@@ -30,43 +30,50 @@
     <div class="form-group row">
         <label for="guestName" class="col-sm-4 col-form-label">Name</label>
         <div class="col-sm-8">
-          <input class="form-control" name="guestName" type="text">
+          <input class="form-control" name="guestName" type="text" placeholder="Name" required>
         </div>
     </div>
   <div class="form-group row">
         <label for="guestContact" class="col-sm-4 col-form-label">Contact NO</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" name="guestContact">
+          <input type="text" class="form-control" name="guestContact" placeholder="Contact Number" pattern="[0-9]{10}" title="Ten digit phone number" required>
         </div>
   </div>  
  <div class="form-group row">
       <label for="purpose" class="col-sm-4 col-form-label">Purpose</label>
       <div class="col-sm-8">
-        <input class="form-control" name="purpose" type="text">
+        <input class="form-control" name="purpose" type="text" placeholder="Purpose of stay" required>
       </div>
     </div>
       <div class="form-group row">
       <label for="studentRoomNo" class="col-sm-4 col-form-label">Room NO</label>
       <div class="col-sm-8">
-        <input class="form-control" name="studentRoomNo" type="text">
+        <input class="form-control" name="studentRoomNo" type="text" pattern= "[J-Kj-k]{1}[0-9]{3}" title="Room Number e.g.(k306)" required>
       </div>
     </div>
   <div class="form-group row">
         <label for="staffAddress" class="col-sm-4 col-form-label">Address-line1</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" name="Address">
+          <input type="text" class="form-control" name="Address" placeholder="Address-line1" required>
         </div>
       </div>
       <div class="form-group row">
         <label for="staffAddress2" class="col-sm-4 col-form-label">Address-line2</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" name="Address2">
+          <input type="text" class="form-control" name="Address2" placeholder="Address-line2" required>
         </div>
       </div>
       <div class="form-group row">
         <label for="city" class="col-sm-4 col-form-label">City</label>
         <div class="col-sm-8">
           <input type="text" class="form-control" name="city">
+            <!--
+              <select class="form-control" name="city">
+            <option value="op1">op1</option>
+            <option value="op2">op2</option>
+            <option value="op3">op3</option>
+          </select> 
+            -->
         </div>
       </div>
 

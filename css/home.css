@@ -1,40 +1,44 @@
-		.graphcontainer{
-			margin-top: 100px;
-			display:flex;
-			flex-direction: column;
-			/*background-color: grey;*/
-
-		}
-
-		.graphcontainer>bargraph{
-			/*background-color: lightgrey;*/
-			display: flex;	 	
-		}
 		#att{
-			width: 350px;
-			/*margin-left: auto;*/
-			margin-right: 10px;
-		}
-		#in-out-entry{
-			width: 350px;
-			margin-left: 400px;
+			width: 300px;
+			float:left;
+			height: 300px;
+			/*margin-left: auto;
+			margin-right: 10px;*/
 		}
 
-		#piechart{
-			margin-top: 400px;
-			margin-left: 150px;
+		#in-out-entry{
+			width: 300px;
+			height:300px;
+			float:left;
+			/*margin-left: 400px;*/
+		}
+
+		.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
+			z-index: 2;
+    		color:#fff  !important;
+			background-color: #777 !important;
+    		border-color: #777 !important; 
+		}
+
+		.badge {
+		    display: inline-block;
+		    min-width: 10px;
+		    padding: 3px 7px;
+		    font-size: 12px;
+		    font-weight: 700;
+		    line-height: 1;
+		    color: #777 !important;
+		    text-align: center;
+		    white-space: nowrap;
+		    vertical-align: baseline;
+		    background-color: #cbebf6 !important;
+		    border-radius:10px;
 		}
 
 		#complains{
-			margin-top: 100px;
-			margin-left: 50px;
-			margin-right:50px;
-			height:750px;
-			margin-bottom: 100px;
-			background-color: #dee8f9;
+			border-radius: 10px;
+			border-style:solid;
+			border-width:1px;
+			border-color:#ddd; 
 		}
 
-		#complain td{
-			text-align: center;
-			margin-top: 10px;
-		}

@@ -27,43 +27,50 @@
         <div class="form-group row">
         <label for="staffName" class="col-sm-4 col-form-label">Id</label>
         <div class="col-sm-8">
-          <input class="form-control" name="staffid" type="text">
+          <input class="form-control" name="staffid" type="text" placeholder="Staff ID" required>
         </div>
     </div>
      <div class="form-group row">
         <label for="staffName" class="col-sm-4 col-form-label">Password</label>
         <div class="col-sm-8">
-          <input class="form-control" name="password" type="password">
+          <input class="form-control" name="password" type="password" placeholder="password" required>
         </div>
     </div>
     <div class="form-group row">
         <label for="staffName" class="col-sm-4 col-form-label">Name</label>
         <div class="col-sm-8">
-          <input class="form-control" name="staffName" type="text">
+          <input class="form-control" name="staffName" type="text" placeholder="Staff Name" required>
         </div>
     </div>
   <div class="form-group row">
         <label for="staffContact" class="col-sm-4 col-form-label">Contact NO</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" name="staffContact">
+          <input type="text" class="form-control" name="staffContact" placeholder="Contact Number"  pattern="[0-9]{10}" title="Ten digit phone number" required>
         </div>
       </div>  
   <div class="form-group row">
         <label for="staffAddress" class="col-sm-4 col-form-label">Address-line1</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" name="staffAddress">
+          <input type="text" class="form-control" name="staffAddress" placeholder="Address-line1" required>
         </div>
       </div>
       <div class="form-group row">
         <label for="staffAddress2" class="col-sm-4 col-form-label">Address-line2</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" name="staffAddress2">
+          <input type="text" class="form-control" name="staffAddress2" placeholder="Address-line2" required>
         </div>
       </div>
       <div class="form-group row">
         <label for="city" class="col-sm-4 col-form-label">City</label>
         <div class="col-sm-8">
           <input type="text" class="form-control" name="city">
+          <!--
+            <select class="form-control" name="city">
+      <option value="op1">op1</option>
+      <option value="op2">op2</option>
+      <option value="op3">op3</option>
+    </select> 
+          -->
         </div>
       </div>
 

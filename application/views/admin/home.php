@@ -7,8 +7,7 @@
 
 	<!-- external css -->
 
-
-	<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<link  href="<?php echo base_url(); ?>css/home.css" rel="stylesheet">
 	<script type="text/javascript">
 	window.onload = function () {
     var chart = new CanvasJS.Chart("entry",
@@ -115,29 +114,45 @@ include_once('header.php');
 
 
 	
+	<div class="row">
+		<div class="col-sm-3" style="margin-left:2%">
+			<div>
+				<ul class="list-group">
+				  <li class="list-group-item active">Today's Stat</li>
+				  <li class="list-group-item">Total Present<span class="badge badge-light">300</span></li>
+				  <li class="list-group-item">Total Out Entries<span class="badge badge-light">50</span></li>
+				</ul>
+			</div>
 
-	<div style="float: left; width: 30%">
-		<!-- complains -->
-		<div id="complains">
-			<table id="complain" style="width:100%">
-				<tr>
-					<td>Complain1</td>
-				</tr>
-				<tr>
-					<td>Complain2</td>
-				</tr>
-				<tr>
-					<td>Complain3</td>
-				</tr>
-			</table>
+			<div>
+				<ul class="list-group">
+				  <li class="list-group-item active">Total Complains</li>
+				  <li class="list-group-item">Solved Complains<span class="badge badge-light">153</span></li>
+				  <li class="list-group-item">Unsolved Complains<span class="badge badge-light">56</span></li>
+				</ul>
+			</div>
+
+			<ul id="complains" class="list-group">
+			  <li class="list-group-item active">Complains</li>
+			  <marquee direction="up">
+			  <li class="list-group-item">Complain1</li>
+			  <li class="list-group-item">Complain2</li>
+			  <li class="list-group-item">Complain3</li>
+			  <li class="list-group-item">Complain4</li>
+			  <li class="list-group-item">Complain5</li>
+			</marquee>
+			</ul>
+		</div>	
+
+		<div class="col-sm-8">
+			<div class="row">
+				<div id="att" class="col-sm-4" style="margin-left:7%;"></div>
+				<div id="in-out-entry" class="col-sm-4" style="margin-left:7%;margin-right:10%;"></div>
+			</div>
+			<div class="row">
+				<center id="piechart"></center>
+			</div>
 		</div>
-	</div>
-	<div style="float: left; width: 70%">
-		<div class="graphcontainer">
-			<!-- BarGraphs -->
-	 		<div id="att" class="bargraph"></div>
-			<div id="in-out-entry" class="bargraph"></div>
-			<!-- piechart -->
-			<div id="piechart"></div> 
-	</div>
-	</div>
+
+
+	
