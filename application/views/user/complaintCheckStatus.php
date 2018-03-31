@@ -48,7 +48,7 @@
  	<div class="form-group row">
 
 		 <div class="col-sm-12">
-			<textarea class="form-control" rows="3" id="status" name="status" placeholder="Status"></textarea>
+			<textarea class="form-control" rows="3" id="status" name="status" placeholder="Status" readonly></textarea>
 			</div>
 	</div> 
 		</div>

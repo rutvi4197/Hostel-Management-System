@@ -45,7 +45,7 @@
  	<div class="form-group row">
   		<label for="description" class="col-sm-4 col-form-label">Description</label>
 		 <div class="col-sm-8">
-			<textarea class="form-control" rows="5" id="description" name="description" placeholder="Description"></textarea>
+			<textarea class="form-control" rows="5" id="description" name="description" placeholder="Description" required></textarea>
 			</div>
 	</div> 
 		<div class="form-group row">

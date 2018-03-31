@@ -37,13 +37,13 @@
 	 <div class="form-group row">
         <label for="studentName" class="col-sm-4 col-form-label">Student Name</label>
         <div class="col-sm-8">
-          <input class="form-control" name="studentName" type="text" placeholder="Student Name" required>
+          <input class="form-control" name="studentName" type="text" placeholder="Student Name"  pattern="[^0-9]+" title="Invalid input" required>
         </div>
     </div>
 <div class="form-group row">
 			<label for="dateOfBirth" class="col-sm-4 col-form-label">Date of Birth</label>
 			<div class="col-sm-8">
-				<input class="form-control" name="studentDOB" type="text" placeholder="Date of Birth"required>
+				<input class="form-control" name="studentDOB" type="text" placeholder="Date of Birth" required>
 			</div>
 		</div>	
 	<div class="form-group row">
@@ -55,14 +55,14 @@
 	<div class="form-group row">
         <label for="studentCourse" class="col-sm-4 col-form-label">Course</label>
         <div class="col-sm-8">
-          <input class="form-control" name="studentCourse" type="text" placeholder="Course Name" required>
+          <input class="form-control" name="studentCourse" type="text" placeholder="Course Name" pattern="[^0-9]+" title="Invalid input" required>
         </div>
     </div>
 	<div class="form-group row">
         <label for="side" class="col-sm-4 col-form-label">Side</label>
         <div class="col-sm-8">
             <div class="radio" name="side"> 
-      <label><input type="radio" name="side" value="left" required>Left</label>
+      <label><input type="radio" name="side" value="left" required checked>Left</label>
   
       <label><input type="radio" name="side" value="right">Right</label>
     </div>
