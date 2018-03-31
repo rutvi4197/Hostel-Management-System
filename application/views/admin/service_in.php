@@ -27,13 +27,13 @@
     <div class="form-group row">
         <label for="name" class="col-sm-4 col-form-label">Name</label>
         <div class="col-sm-8">
-          <input class="form-control" name="name" type="text">
+          <input class="form-control" name="name" type="text" required>
         </div>
     </div>
     <div class="form-group row">
       <label for="Purpose" class="col-sm-4 col-form-label">Purpose</label>
       <div class="col-sm-8">
-        <input class="form-control" name="purpose" type="text">
+        <input class="form-control" name="purpose" type="text" required>
       </div>
     </div>
 

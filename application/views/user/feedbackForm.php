@@ -7,19 +7,20 @@
 </head>
 <body>
 
-
 <?php include('header.php');?>
+
 
 <div class="row" style="margin-top: 1%;"> 
   <div class="col-sm-2 col-md-2">
   </div>    
   <div class="col-sm-8 col-md-8">
-   <center> <label for="addCourier"><h3><b>Add Courier</b></h3></label></center> 
+	  <center> <label for="feedbackForm"><h3><b>Feedback Form</b></h3></label></center> 
    </div>
   <div class="col-sm-2 col-md-2">
   </div>    
 </div>
-<form action="<?php echo site_url('courier/addcourier') ?>" method="post">   
+
+<form action="<?php echo site_url('addattendence/doattendence') ?>" method="post">   
 <div class="row" style="margin-top: 1%;"> 
 	<div class="col-sm-3 col-md-3">
 	</div>		
@@ -29,29 +30,30 @@
 		<div class="form-group row">
 				<label for="studentID" class="col-sm-4 col-form-label">Student ID</label>
 				<div class="col-sm-8">
-					<input class="form-control" name="studentid" type="text" pattern="[0-9]{9}" title="Nine digit Student ID" placeholder="Student ID" required>
+					<input class="form-control" name="studentid" type="text" placeholder="Student ID" pattern="[0-9]{9}" title="Nine digit Student ID" required>
 				</div>
 		</div>
+	 <div class="form-group row">
+        <label for="studentName" class="col-sm-4 col-form-label">Student Name</label>
+        <div class="col-sm-8">
+          <input class="form-control" name="studentName" type="text" placeholder="Student Name" required>
+        </div>
+    </div>
 		<div class="form-group row">
-			<label for="studentRoomNo" class="col-sm-4 col-form-label">Room NO</label>
-			<div class="col-sm-8">
-				<input class="form-control" name="studentroomno" type="text" pattern="[J-Kj-k]{1}[0-9]{3}" placeholder="Room Number" title="Room Number e.g.(k306)" required>
+  		<label for="feedback" class="col-sm-4 col-form-label">Feedback</label>
+		 <div class="col-sm-8">
+			<textarea class="form-control" rows="5" id="feedback" name="feedback" placeholder="Feedback" required></textarea>
 			</div>
-		</div>
-		<div class="form-group row">
-			<label for="courierCompany" class="col-sm-4 col-form-label">Courier Company</label>
-			<div class="col-sm-8">
-				<input class="form-control" name="courierCompany" type="text" placeholder="Name of Courier Company" required>
-			</div>
-		</div>
+	</div> 
 		<div class="form-group row">
 			<div class="col-sm-4">
 			</div>
 			<div class="col-sm-8">
-			<button type="submit" class="btn btn-primary mb-1" style="margin:2% 0%;padding:2% 4%;">ADD</button>
+			<button type="submit" class="btn btn-primary mb-1" style="margin:2% 0%;padding:2% 4%;">Submit</button>
 			</div>
 			
 		</div>
+ 
 		</div>
 		
 	</div>
@@ -62,6 +64,6 @@
  
 
 </form>
+
 </body>
 </html>
-
