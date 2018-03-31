@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Courier extends CI_Controller {
+class Complain extends CI_Controller {
 
 	
 	public function add()
@@ -10,12 +10,11 @@ class Courier extends CI_Controller {
 		$this->load->view('admin/add_courier');
 	}
 
-	public function view()
+	public function viewcomplain()
 	{
-		$this->load->model('courierrecord');
-		$arr['courier']=$this->courierrecord->viewcourier();
+		
 
-		$this->load->view('admin/courier',$arr);
+		$this->load->view('admin/complain');
 	}
 	public function addcourier()
 	{
@@ -38,24 +37,6 @@ class Courier extends CI_Controller {
 			redirect('courier/add');
 		}
 
-	}
-	public function outentry($id)
-	{
-		date_default_timezone_set('Asia/Kolkata');
-		$outdate=date('d/m/Y');
-		$outtime=date('H:i:s');
-
-		$this->load->model('Courierrecord');
-		
-
-		if($this->Courierrecord->updateinentry($id,$outtime,$outdate))
-		{
-				redirect('courier/view');
-		}
-		else {
-			$this->session->set_flashdata('loginerror','error');
-			redirect('courier/view');
-		}
 	}
 	
 	

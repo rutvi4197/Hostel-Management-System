@@ -5,7 +5,9 @@ class Admin extends CI_Controller {
 	
 	public function staff()
 	{
-		$this->load->view('admin/add_staff');
+		$this->load->model('citydetails');
+		$arr['city']=$this->citydetails->getcitydetails();
+		$this->load->view('admin/add_staff',$arr);
 	}
 	public function addstaff()
 	{

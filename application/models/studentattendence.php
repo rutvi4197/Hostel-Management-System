@@ -12,13 +12,11 @@ class Studentattendence extends CI_Model
 		$q=$this->db->query("select * from in_out as i,student as s where s.Student_id=i.Student_id ");
 		return $q->result();
 	}
-
-	public function updateinentry($student_id,$date,$intime)
+ 	public function updateinentry($id,$date,$intime)
 	{
-		$q=$this->db->query("update in_out set In_time='$intime' and In_date='$date' 
-				where Student_id='$student_id' and In_date='null'");
+		$q=$this->db->query("update in_out set In_time='$intime',In_date='$date' where Id='$id'");
 
-			if($this->db->affected_rows() >= 0)
+			if($this->db->affected_rows() > 0)
 				return true;
 			else
 				return false;

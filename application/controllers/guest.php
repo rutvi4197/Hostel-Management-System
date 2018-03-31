@@ -5,9 +5,11 @@ class Guest extends CI_Controller {
 	
 	public function add()
 	{
+		$this->load->model('citydetails');
+		$arr['city']=$this->citydetails->getcitydetails();
 
 
-		$this->load->view('admin/add_guest');
+		$this->load->view('admin/add_guest',$arr);
 	}
 
 	public function view()
@@ -33,11 +35,11 @@ class Guest extends CI_Controller {
 
 		if($this->guestrecord->addguestentry($staffid,$guestName,$guestContact,$purpose,$studentRoomNo,$address,$address2,$city))
 		{
-				redirect('home');
+				redirect('guest/view');
 		}
 		else {
 			$this->session->set_flashdata('loginerror','error');
-			redirect('login');
+			redirect('guest/add');
 		}
 
 	}

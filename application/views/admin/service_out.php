@@ -80,8 +80,10 @@ include('header.php');
           <td><?php echo $service->V_name;  ?></td>
           <td><?php echo $service->Purpose;  ?></td>
           <td><?php echo $service->In_time;  ?></td>
-          <td><?php if($service->Out_time=="00:00:00")
-                  echo '<a href=""><button class="form-control btn btn-primary" >Check Out</button></a>';
+          <td><?php if($service->Out_time=="00:00:00"){ ?>
+                  <a href="<?php echo site_url('service/outentry/'.$service->V_id);?> "><button class="form-control btn btn-primary" >Check Out</button></a>
+                  <?php 
+                }
                   else{
                     echo $service->Out_time;
                   }       

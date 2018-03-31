@@ -20,19 +20,19 @@ class Attendence extends CI_Controller {
 
 		$this->load->view('admin/markInOutEntry',$arr);
 	}
-	public function doinentry($student_id)
+	public function doinentry($id)
 	{
 			date_default_timezone_set('Asia/Kolkata');
 		$date=date('d/m/Y');
 		$intime=date('H:i:s');
 			$this->load->model('Studentattendence');
-		if($this->Studentattendence->updateinentry($student_id,$date,$intime))
+		if($this->Studentattendence->updateinentry($id,$date,$intime))
 		{
 			redirect('home');
 		}
 		else
 		{
-			redirect('admin/inoutentry');
+			redirect('attendence/inoutentry');
 		}
 	}
 	

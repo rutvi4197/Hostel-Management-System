@@ -30,13 +30,32 @@ class Service extends CI_Controller {
 
 		if($this->Servicerecord->addservicentry($name,$purpose,$intime,$date))
 		{
-				redirect('home');
+				redirect('service/view');
 		}
 		else {
 			$this->session->set_flashdata('loginerror','error');
-			redirect('login');
+			redirect('service/add');
 		}
 
+	}
+
+
+	public function outentry($id)
+	{
+		date_default_timezone_set('Asia/Kolkata');
+		
+		$outtime=date('H:i:s');
+
+		$this->load->model('Servicerecord');
+
+		if($this->Servicerecord->updateinentry($id,$outtime))
+		{
+				redirect('service/view');
+		}
+		else {
+			$this->session->set_flashdata('loginerror','error');
+			redirect('service/view');
+		}
 	}
 	
 	
