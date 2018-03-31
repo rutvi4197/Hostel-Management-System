@@ -158,8 +158,11 @@ include_once('header.php');
 <div class="row">
 	<?php
 
+<<<<<<< HEAD
 		include_once('footer.php');
 	 ?>
 </div>	
 
+=======
+>>>>>>> 730e692835623d8357a4dd7e1ccc36f7af367b9d
 	
