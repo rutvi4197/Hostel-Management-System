@@ -15,7 +15,7 @@ include('header.php');
  <link rel="Stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-
+ 
 
 
    <script type="text/javascript">
@@ -84,7 +84,15 @@ include('header.php');
 					<td><?php echo $outstudent->Place  ?></td>
 					<td><?php echo $outstudent->Name_of_relative  ?></td>
 					<td><?php echo $outstudent->Contact_no  ?></td>
-					<td><a href="#"><button type="button" class="form-control btn btn-primary" >In Entry</button></a></td>
+					<td><?php if($outstudent->In_date=='null')
+						{
+						echo '<a href="site_url("attendence/doinentry/'.$outstudent->Student_id.'); "><button type="button" class="form-control btn btn-primary" >In Entry</button></a></td>';
+						}
+						else
+						{
+							echo $outstudent->In_date;
+						}
+						?>
 					
 					</tr>
 

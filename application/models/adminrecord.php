@@ -10,5 +10,9 @@ class Adminrecord extends CI_Model
 		else
 			return false;
 	}
-	
+	public function viewstaff()
+	{
+		$q=$this->db->query("select * from staff as s,city as c where Is_active=1 and c.City_id=s.City_id order by Staff_id desc");
+		return $q->result();
+	}
 }

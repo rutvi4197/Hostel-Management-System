@@ -52,7 +52,7 @@ include('header.php');
           <div class="outter-wp">
             <div class="sub-heard-part"></div>
               <div class="graph-visual tables-main">
-                <h3 class="inner-tittle two"><center><font size="10" color="#000051">Student Details</font></center></h3>
+                <h3 class="inner-tittle two"><center><font size="10" color="#000051">Staff Details</font></center></h3>
                   <div class="graph">
                     <div class="tables" >   
                   <br>  
@@ -60,15 +60,11 @@ include('header.php');
         
         <thead>
         <tr class="active" style="font-size: 3;color:#000051 ">
-          <th><b>Student ID</b></th>
-          <th><b>Student Name</b></th>
-          <th><b>Room No</b></th>
-          <th><b>Course</b></th>
+          <th><b>Staff ID</b></th>
+          <th><b> Name</b></th>
           <th><b>Contact No</b></th>
-          <th><b>Parent Contact</b></th>
           <th><b>City Name</b></th>
-          <th><b>Blood group</b></th>
-      
+         
          
 
           
@@ -76,19 +72,15 @@ include('header.php');
         </thead>
         <tbody>
        <?php 
-               foreach($student as $student):
+               foreach($staff as $staff):
                
               ?>        
           <tr>
-          <td><?php echo $student->Student_id;  ?></td>
-          <td><?php echo $student->First_name.' '.$student->Last_name;  ?></td>
-          <td><?php echo $student->Room_no;  ?></td>
-          <td><?php echo $student->Course;   ?></td>
-          <td><?php echo $student->Contact_no;  ?></td>
-          <td><?php echo $student->Parent_no;  ?></td>
-          <td><?php echo $student->City_name;  ?></td>
-          <td><?php echo $student->Blood_group;  ?></td>
-
+          <td><?php echo $staff->Staff_id;  ?></td>
+          <td><?php echo $staff->Staff_name;  ?></td>
+          <td><?php echo $staff->Contact_no;   ?></td>
+          <td><?php echo $staff->City_name;  ?></td>
+         
          
           
           

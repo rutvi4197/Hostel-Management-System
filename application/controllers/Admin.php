@@ -35,7 +35,9 @@ class Admin extends CI_Controller {
 
 	public function view()
 	{
-		$this->load->view('admin/markInOutEntry');
+		$this->load->model('adminrecord');
+		$arr['staff']=$this->adminrecord->viewstaff();
+		$this->load->view('admin/staff',$arr);
 
 	}
 
