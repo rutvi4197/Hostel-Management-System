@@ -7,19 +7,19 @@
 </head>
 <body>
 
-
 <?php include('header.php');?>
 
 <div class="row" style="margin-top: 1%;"> 
   <div class="col-sm-2 col-md-2">
   </div>    
   <div class="col-sm-8 col-md-8">
-   <center> <label for="addCourier"><h3><b>Add Courier</b></h3></label></center> 
+   <center> <label for="addComplaint"><h3><b>Add Complaint</b></h3></label></center> 
    </div>
   <div class="col-sm-2 col-md-2">
   </div>    
 </div>
-<form action="<?php echo site_url('courier/addcourier') ?>" method="post">   
+
+<form action="<?php echo site_url('addattendence/doattendence') ?>" method="post">   
 <div class="row" style="margin-top: 1%;"> 
 	<div class="col-sm-3 col-md-3">
 	</div>		
@@ -29,21 +29,25 @@
 		<div class="form-group row">
 				<label for="studentID" class="col-sm-4 col-form-label">Student ID</label>
 				<div class="col-sm-8">
-					<input class="form-control" name="studentid" type="text" pattern="[0-9]{9}" title="Nine digit Student ID" placeholder="Student ID" required>
+					<input class="form-control" name="studentid" type="text" placeholder="Student ID" pattern="[0-9]{9}" title="Nine digit Student ID" required>
 				</div>
 		</div>
-		<div class="form-group row">
-			<label for="studentRoomNo" class="col-sm-4 col-form-label">Room NO</label>
-			<div class="col-sm-8">
-				<input class="form-control" name="studentroomno" type="text" pattern="[J-Kj-k]{1}[0-9]{3}" placeholder="Room Number" title="Room Number e.g.(k306)" required>
+	 <div class="form-group row">
+        <label for="complaintType" class="col-sm-4 col-form-label">Complaint Type</label>
+        <div class="col-sm-8">
+         <select class="form-control" name="complaintType">
+			<option value="op1">op1</option>
+			<option value="op2">op2</option>
+			<option value="op3">op3</option>
+		</select> 
+        </div>
+      </div>
+ 	<div class="form-group row">
+  		<label for="description" class="col-sm-4 col-form-label">Description</label>
+		 <div class="col-sm-8">
+			<textarea class="form-control" rows="5" id="description" name="description" placeholder="Description" required></textarea>
 			</div>
-		</div>
-		<div class="form-group row">
-			<label for="courierCompany" class="col-sm-4 col-form-label">Courier Company</label>
-			<div class="col-sm-8">
-				<input class="form-control" name="courierCompany" type="text" placeholder="Name of Courier Company" required>
-			</div>
-		</div>
+	</div> 
 		<div class="form-group row">
 			<div class="col-sm-4">
 			</div>
@@ -62,6 +66,6 @@
  
 
 </form>
+
 </body>
 </html>
-

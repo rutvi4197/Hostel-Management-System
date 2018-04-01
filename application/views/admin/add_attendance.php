@@ -24,7 +24,7 @@
 	<div class="col-sm-6 col-md-6" style="display:flex;justify-content:center;">
 		<label class="col-sm-2 col-form-label">Student ID</label>
 		<div class="col-sm-6">
-			<input type="text"  class="form-control" name="studentid" placeholder="Student ID">
+			<input type="text"  class="form-control" name="studentid" placeholder="Student ID" pattern="[0-9]{9}" title="Nine digit StudentID" required>
 		</div>
 		<button type="submit" class="btn btn-primary mb-1 col-sm-2" >ADD</button>
 	</div>
