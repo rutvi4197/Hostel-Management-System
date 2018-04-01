@@ -54,7 +54,7 @@
         </li>
 
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-wrench"></span>Serivces<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-wrench"></span>Services<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo site_url('service/add'); ?>">Add Service</a></li>
             <li><a href="<?php echo site_url('service/view'); ?>">View Service</a></li> 
