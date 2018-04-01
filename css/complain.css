@@ -1,18 +1,27 @@
 .card{
 	width:80%;
-	height:auto;
 	border-radius: 10px;
-	border-style:solid;
-	border-width:1px;
+	border-width:3px;
 	border-color:#ddd;
 	margin-left:10%;
 	margin-top:7%;
 	float:left;
+	background-color: #f4f4f4;
+	box-shadow: 2px 2px 2px 2px #bbb;
 }
 
 .card-header{
-	color: #337ab7 !important;
-	background-color: #cbebf6 !important;
+	margin-left: 5px;
+	color: #fff !important;
+	background-color: 
+}
+
+.card-body{
+	margin-left: 5px;
+}
+
+.card-title{
+	margin-left: 5px;
 }
 
 
