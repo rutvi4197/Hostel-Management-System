@@ -62,6 +62,7 @@ include('header.php');
 				
 				<thead>
 				<tr class="active" style="font-size: 3;color:#000051 ">
+                    <th><b>Complain Id</b></th>
 					<th><b>Complain type</b></th>
 					<th><b>Student Id</b></th>
 					<th><b>Room No</b></th>
@@ -72,6 +73,7 @@ include('header.php');
 				</thead>
 				<tbody>
                 	<tr>
+                        <td>001</td>
                 		<td>Electricity</td>
                 		<td>201712022</td>
                 		<td>J311</td>
@@ -79,6 +81,7 @@ include('header.php');
                 		<td>Done</td>
                 	</tr>
                 	<tr>
+                        <td>002</td>
                 		<td>Electricity</td>
                 		<td>201712022</td>
                 		<td>K111</td>
@@ -86,6 +89,7 @@ include('header.php');
                 		<td>Done</td>
                 	</tr>
                 	<tr>
+                        <td>003</td>
                 		<td>Electricity</td>
                 		<td>201712022</td>
                 		<td>J302</td>
