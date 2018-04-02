@@ -17,4 +17,15 @@ class Studentrecord extends CI_Model
 		$q=$this->db->query("select * from student where Room_no='$no'");
 		return $q->result();
 	}
+
+	public function searcroomdetails($optradio,$floor)
+	{
+		if($floor=="all")
+		{
+			$q=$this->db->query("select * from room where Room_no like '$optradio%'");
+		}
+		else
+		$q=$this->db->query("select * from room where Room_no like '$optradio$floor%'");
+		return $q->result();
+	}
 }

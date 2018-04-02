@@ -5,6 +5,19 @@ class Home extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('admin/home');
+		$date=date('d/m/Y');
+		$this->load->model('homepage');
+		$arr['total']=$this->homepage->gettotalstudent();
+
+		$this->load->model('homepage');
+		$arr['out']=$this->homepage->getoutentry();
+
+		$this->load->model('homepage');
+		$arr['absent']=$this->homepage->getabsent($date);
+
+		$this->load->model('homepage');
+		$arr['complain']=$this->homepage->getcomplain();
+
+		$this->load->view('admin/home',$arr);
 	}	
 }

@@ -119,28 +119,47 @@ include_once('header.php');
 			<div>
 				<ul class="list-group">
 				  <li class="list-group-item active">Today's Stat</li>
-				  <li class="list-group-item">Total Present<span class="badge badge-light">300</span></li>
-				  <li class="list-group-item">Total Out Entries<span class="badge badge-light">50</span></li>
+				  <?php
+				  	foreach ($total as $total) {
+				  		$totalstudent=$total->cnt;
+				  	}
+				   ?>
+				  <li class="list-group-item">Total Present<span class="badge badge-light"><?php echo $totalstudent; ?></span></li>
+				   <?php
+				  	foreach ($out as $out) {
+				  		$outstudent=$out->out;
+				  	}
+				   ?>
+				  <li class="list-group-item">Total Out Entries<span class="badge badge-light"><?php echo $outstudent; ?></span></li>
+				   <?php
+				  	foreach ($absent as $absent) {
+				  		$absentstudent=$absent->absent;
+				  	}
+				   ?>
+				  <li class="list-group-item">Total Absent Entries<span class="badge badge-light"><?php echo $absentstudent; ?></span></li>
+
+				  <li class="list-group-item">Today Present Entries<span class="badge badge-light"><?php $pre=$totalstudent-($outstudent+$absentstudent); echo $pre; ?></span></li>
 				</ul>
 			</div>
 
-			<div>
-				<ul class="list-group">
-				  <li class="list-group-item active">Total Complains</li>
-				  <li class="list-group-item">Solved Complains<span class="badge badge-light">153</span></li>
-				  <li class="list-group-item">Unsolved Complains<span class="badge badge-light">56</span></li>
-				</ul>
-			</div>
-
+		
 			<div id="complains">
 				<ul class="list-group">
 					  <li class="list-group-item active">Complains</li>
 					  <marquee direction="up">
-						  <li class="list-group-item">Complain1</li>
-						  <li class="list-group-item">Complain2</li>
-						  <li class="list-group-item">Complain3</li>
-						  <li class="list-group-item">Complain4</li>
-						  <li class="list-group-item">Complain5</li>
+						 <?php
+						 $i=0;
+						  	foreach ($complain as $complain) {
+						  		if($i<6)
+						  		{
+						  		echo ' <li class="list-group-item">'.$complain->Student_id.' -- '.$complain->Type_name.'</li>';
+						  		$i++;
+						  		}
+						  
+						  		
+						  	}
+				  		 ?>
+						  
 					  </marquee>
 				</ul>
 			</div>

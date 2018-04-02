@@ -28,21 +28,26 @@
     <div class="form-group row">
         <label for="studentID" class="col-sm-4 col-form-label">Select Wing</label>
         <div class="col-sm-8">
-          <label class="radio-inline"><input type="radio" name="optradio" >J</label>
-          <label class="radio-inline"><input type="radio" name="optradio">K</label>  
+          <label class="radio-inline"><input type="radio" name="optradio" value="j" >J</label>
+          <label class="radio-inline"><input type="radio" name="optradio" value="k">K</label>  
         </div>
     </div>
     <div class="form-group row">
       <label for="studentRoomNo" class="col-sm-4 col-form-label">Select floor</label>
-      <div class="col-sm-8">
-        <select class="form-control" name="floor">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-  </select>
-              </div>
+      <div class="col-sm-4">
+              <select class="form-control" name="floor">
+           <option value="all">ALL</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+
+          </select>
+    </div>
+     <div class="col-sm-4">
+      <button type="submit" class="btn btn-primary " >Click here</button>
     </div>
  </div>
+</div>
 </div>
 </div>
 </form>

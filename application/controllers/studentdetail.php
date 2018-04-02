@@ -17,7 +17,16 @@ class Studentdetail extends CI_Controller {
 
 		$this->load->view('admin/studentDetails',$arr);
 	}
-	
+	public function searchroom()
+	{
+		$optradio=$this->input->post('optradio');
+		$floor=$this->input->post('floor');
+		$this->load->model('studentrecord');
+		$arr['room']=$this->studentrecord->searcroomdetails($optradio,$floor);
+		
+		$this->load->view('admin/roomDetails',$arr);
+		
+	}
 
 	
 	
