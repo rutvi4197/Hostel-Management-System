@@ -2,39 +2,36 @@
 
 class Complain extends CI_Controller {
 
-	
-	public function add()
-	{
-
-
-		$this->load->view('admin/add_courier');
-	}
 
 	public function viewcomplain()
 	{
+		$this->load->model('complainrecord');
 		
-
-		$this->load->view('admin/complain');
+		$arr['complain']=$this->complainrecord->getcomplain();
+		$this->load->view('admin/complain',$arr);
 	}
-	public function addcourier()
-	{
-		$studentid=$this->input->post('studentid');
-		$studentRoomNo=$this->input->post('studentroomno');
-		$courierCompany=$this->input->post('courierCompany');
-		
-		date_default_timezone_set('Asia/Kolkata');
-		$date=date('d/m/Y');
-		$intime=date('H:i:s');
-		$staffid=$this->session->userdata('id');
-		$this->load->model('Courierrecord');
 
-		if($this->Courierrecord->addcourierentry($intime,$date,$studentid,$courierCompany,$studentRoomNo,$staffid))
+	public function allcomplain()
+	{
+		$this->load->model('complainrecord');
+		
+		$arr['complain']=$this->complainrecord->getallcomplain();
+		$this->load->view('admin/complain_status',$arr);
+	}
+
+	public function changestatus($id)
+	{
+		
+		
+		$this->load->model('complainrecord');
+
+		if($this->complainrecord->changestatus($id))
 		{
-				redirect('courier/view');
+				redirect('complain/allcomplain');
 		}
 		else {
 			$this->session->set_flashdata('loginerror','error');
-			redirect('courier/add');
+			redirect('complain/viewcomplain');
 		}
 
 	}

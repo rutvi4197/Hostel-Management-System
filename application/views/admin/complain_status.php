@@ -44,9 +44,9 @@ include('header.php');
         });
     </script>
     <div class="row">
-    	<div class="col-md-3 col-sm-3">
+    	<div class="col-md-2 col-sm-2">
     	</div>
-    	<div class="col-md-6 col-sm-6">
+    	<div class="col-md-8 col-sm-8">
 			<div class="page-container">
 			<div class="left-content">
 				<div class="inner-content">
@@ -62,40 +62,27 @@ include('header.php');
 				
 				<thead>
 				<tr class="active" style="font-size: 3;color:#000051 ">
-                    <th><b>Complain Id</b></th>
 					<th><b>Complain type</b></th>
 					<th><b>Student Id</b></th>
 					<th><b>Room No</b></th>
 					<th><b>Date</b></th>
-					<th><b>Status</b></th>
 					
 				</tr>
 				</thead>
 				<tbody>
+                    <?php 
+
+                        foreach ($complain as $complain) :
+                    ?>
                 	<tr>
-                        <td>001</td>
-                		<td>Electricity</td>
-                		<td>201712022</td>
-                		<td>J311</td>
-                		<td>2 April</td>
-                		<td>Done</td>
+                        
+                		<td><?php echo $complain->Type_name ?></td>
+                		<td><?php echo $complain->Student_id ?></td>
+                		<td><?php echo $complain->Room_no ?></td>
+                		<td><?php echo $complain->Date ?></td>
+                		
                 	</tr>
-                	<tr>
-                        <td>002</td>
-                		<td>Electricity</td>
-                		<td>201712022</td>
-                		<td>K111</td>
-                		<td>3 April</td>
-                		<td>Done</td>
-                	</tr>
-                	<tr>
-                        <td>003</td>
-                		<td>Electricity</td>
-                		<td>201712022</td>
-                		<td>J302</td>
-                		<td>3 April</td>
-                		<td>Done</td>
-                	</tr>
+                	<?php endforeach; ?>
 			</tbody>
 			</table> 
 			
@@ -107,7 +94,7 @@ include('header.php');
 			</div>
 		</div>
 	</div>
-	<div class="col-md-3">
+	<div class="col-md-2">
 	</div>
 	</div>
 </body>

@@ -12,100 +12,25 @@
 include_once('header.php');
 ?>
 	<div class="row" style="margin-top:2%">
+		<?php 
+			foreach ($complain as $complain) :
+		?>
 		<div class="col-sm-4">
 			<div class="card">
 				<div class="card-header">
-					<h2><span class="label label-primary">Electricity</span></h2>	
+					<h2><span class="label label-primary"><?php echo $complain->Type_name; ?></span></h2>	
 				</div>
 		  		<div class="card-body">
 		  			<div class="card-title">
-		  				<h5><em>Sunday, 1 April 2018 (IST)</em></h5>
+		  				<h5><em><?php echo $complain->Date; ?></em></h5>
 		  			</div>
-		    		<p class="card-text"><i><b>Tubelight is not working. Please get it replaced. The regulator of fan is also not working.</b></i></p>
-		    		<h5><span class="label label-default">Vaneeta</span><span style="margin-left:3px;"class="label label-default">J311</span></h5>
-		    		<a href="#" class="btn btn-default" style="float:right;margin-right: 10px;margin-bottom: 10px;box-shadow: 1px 1px #ddd;">Status</a>
+		    		<p class="card-text"><i><b><?php echo $complain->Description; ?></b></i></p>
+		    		<h5><span class="label label-default"><?php echo $complain->First_name; ?></span><span style="margin-left:3px;"class="label label-default"><?php echo $complain->Room_no; ?></span></h5>
+		    		<a href="<?php echo site_url('complain/changestatus/'.$complain->complaint_id) ?>" class="btn btn-default" style="float:right;margin-right: 10px;margin-bottom: 10px;box-shadow: 1px 1px #ddd;">Change Status</a>
 		    	</div>
 		    </div>
   		</div>
-		<div class="col-sm-4">
-			<div class="card">
-				<div class="card-header">
-					<h2><span class="label label-primary">Electricity</span></h2>	
-				</div>
-		  		<div class="card-body">
-		  			<div class="card-title">
-		  				<h5><em>Sunday, 1 April 2018 (IST)</em></h5>
-		  			</div>
-		    		<p class="card-text"><i><b>Tubelight is not working. Please get it replaced. The regulator of fan is also not working. Tubelight is not working. Please get it replaced. The regulator of fan is also not working. Tubelight is not working. Please get it replaced. The regulator of fan is also not working. Tubelight is not working. Please get it replaced. The regulator of fan is also not working.</b></i></p>
-		    		<h5><span class="label label-default">Vaneeta</span><span style="margin-left:3px;"class="label label-default">J311</span></h5>
-		    		<a href="#" class="btn btn-default" style="float:right;margin-right: 10px;margin-bottom: 10px;box-shadow: 1px 1px #ddd;">Status</a>
-		    		
-		    	</div>
-		    </div>
-  		</div>
-		<div class="col-sm-4">
-			<div class="card">
-				<div class="card-header">
-					<h2><span class="label label-primary">Electricity</span></h2>	
-				</div>
-		  		<div class="card-body">
-		  			<div class="card-title">
-		  				<h5><em>Sunday, 1 April 2018 (IST)</em></h5>
-		  			</div>
-		    		<p class="card-text"><i><b>Tubelight is not working. Please get it replaced. The regulator of fan is also not working.</b></i></p>
-		    		<h5><span class="label label-default">Vaneeta</span><span style="margin-left:3px;"class="label label-default">J311</span></h5>
-		    		<a href="#" class="btn btn-default" style="float:right;margin-right: 10px;margin-bottom: 10px;box-shadow: 1px 1px #ddd;">Status</a>
-		    	</div>
-		    </div>
-  		</div>
+  	<?php endforeach; ?>
 	</div>
-
-	<div class="row" margin-bottom:3%;>
-		<div class="col-sm-4">
-			<div class="card">
-				<div class="card-header">
-					<h2><span class="label label-primary">Electricity</span></h2>	
-				</div>
-		  		<div class="card-body">
-		  			<div class="card-title">
-		  				<h5><em>Sunday, 1 April 2018 (IST)</em></h5>
-		  			</div>
-		    		<p class="card-text"><i><b>Tubelight is not working. Please get it replaced. The regulator of fan is also not working.Tubelight is not working. Please get it replaced. The regulator of fan is also not working.Tubelight is not working. Please get it replaced. The regulator of fan is also not working.Tubelight is not working. Please get it replaced. The regulator of fan is also not working.</b></i></p>
-		    		<h5><span class="label label-default">Vaneeta</span><span style="margin-left:3px;"class="label label-default">J311</span></h5>
-		    		<a href="#" class="btn btn-default" style="float:right;margin-right: 10px;margin-bottom: 10px;box-shadow: 1px 1px #ddd;">Status</a>
-		    	</div>
-		    </div>
-  		</div>
-		<div class="col-sm-4">
-			<div class="card">
-				<div class="card-header">
-					<h2><span class="label label-primary">Electricity</span></h2>	
-				</div>
-		  		<div class="card-body">
-		  			<div class="card-title">
-		  				<h5><em>Sunday, 1 April 2018 (IST)</em></h5>
-		  			</div>
-		    		<p class="card-text"><i><b>Tubelight is not working. Please get it replaced. The regulator of fan is also not working.</b></i></p>
-		    		<h5><span class="label label-default">Vaneeta</span><span style="margin-left:3px;"class="label label-default">J311</span></h5>
-		    		<a href="#" class="btn btn-default" style="float:right;margin-right: 10px;margin-bottom: 10px;box-shadow: 1px 1px #ddd;">Status</a>
-		    	</div>
-		    </div>
-  		</div>
-		<div class="col-sm-4">
-			<div class="card">
-				<div class="card-header">
-					<h2><span class="label label-primary">Electricity</span></h2>	
-				</div>
-		  		<div class="card-body">
-		  			<div class="card-title">
-		  				<h5><em>Sunday, 1 April 2018 (IST)</em></h5>
-		  			</div>
-		    		<p class="card-text"><i><b>Tubelight is not working. Please get it replaced. The regulator of fan is also not working.</b></i></p>
-		    		<h5><span class="label label-default">Vaneeta</span><span style="margin-left:3px;"class="label label-default">J311</span></h5>
-		    		<a href="#" class="btn btn-default" style="float:right;margin-right: 10px;margin-bottom: 10px;box-shadow: 1px 1px #ddd;">Status</a>
-		    	</div>
-		    </div>
-  		</div>
-	</div>
-
-	
+	</body>
+	</html>	
