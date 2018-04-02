@@ -5,10 +5,10 @@ class Studentdetail extends CI_Controller {
 	
 	public function viewroom()
 	{
-		$this->load->model('courierrecord');
-		$arr['courier']=$this->courierrecord->viewcourier();
-
-		$this->load->view('admin/courier',$arr);
+		$this->load->model('studentrecord');
+		$arr['room']=$this->studentrecord->viewroomdetails();
+		
+		$this->load->view('admin/roomDetails',$arr);
 	}
 	public function viewstudentdetails()
 	{

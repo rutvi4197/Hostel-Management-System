@@ -4,7 +4,7 @@
   <title>HOR WOMEN</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+</head> 
 <body>
 
 <?php include('header.php');?>
@@ -18,7 +18,7 @@
   <div class="col-sm-2 col-md-2">
   </div>    
 </div>
-<form action="<?php echo site_url('courier/addcourier') ?>" method="post">   
+<form action="<?php echo site_url('studentdetail/searchroom') ?>" method="post">   
 <div class="row" style="margin-top: 1%;"> 
   <div class="col-sm-3 col-md-3">
   </div>    
@@ -28,14 +28,14 @@
     <div class="form-group row">
         <label for="studentID" class="col-sm-4 col-form-label">Select Wing</label>
         <div class="col-sm-8">
-          <label class="radio-inline"><input type="radio" name="optradio" checked>J</label>
+          <label class="radio-inline"><input type="radio" name="optradio" >J</label>
           <label class="radio-inline"><input type="radio" name="optradio">K</label>  
         </div>
     </div>
     <div class="form-group row">
       <label for="studentRoomNo" class="col-sm-4 col-form-label">Select floor</label>
       <div class="col-sm-8">
-        <select class="form-control" id="sel1">
+        <select class="form-control" name="floor">
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -48,47 +48,43 @@
 </form>
 
 <div class="row" style="margin-top:2%;margin:auto;">
+    <?php
+      foreach ($room as $room):
+   ?>
     <div class="col-md-2">
-      <div class="card">
-        <div class="card-header bg-primary">k302</div>
-        <div class="card-body">Nisha<br>-</div> 
-      </div>  
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-          <div class="card-header">k315</div>
-          <div class="card-body">Devisha<br>Krishma</div> 
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-              <div class="card-header">k302</div>
-              <div class="card-body">Shilpi<br/>Aayushi</div> 
-      </div>
-    </div>
+      <div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title"><?php echo $room->Room_no ?></h3>
+  </div>
+  <div class="panel-body">
+   <?php
+              
+         if($room->No_of_occupants==0)     
+         {
+          echo 'No Member</br>
+              No Member';
+         }  
+         else
+         {
+    $CI =& get_instance();
+    $CI->load->model('Studentrecord');
+    $result= $CI->Studentrecord->roomwisename($room->Room_no);    
+    foreach($result as $row){ 
+         echo $row->First_name.' :-'.$row->Student_id .'</br>';  
+          if($room->No_of_occupants==1)
+         {
+          echo '</br>';
+         }  
+        }
+    }
+?>
 
-    <div class="col-md-2">
-      <div class="card">
-          <div class="card-header bg-danger">k302</div>
-          <div class="card-body">Poorva<br/>Shayana</div> 
-      
-        </div>
-    </div>
-
-    <div class="col-md-2">
-      <div class="card">
-         <div class="card-header">k302</div>
-        <div class="card-body">Poorva<br/>Shayana</div> 
-      
-      </div>
-    </div>
-
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-header">k302</div>
-        <div class="card-body">Poorva<br/>Shayana</div> 
-      </div>
-    </div>
+    
+  </div>
+</div>
+</div> 
+<?php endforeach; ?>
+    
   </div>
 
 
