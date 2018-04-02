@@ -7,7 +7,7 @@
   <script src="<?php echo base_url(); ?>canvasjs/canvasjs.min.js"></script>
   
 
-
+ 
 <div class="row" style="overflow-x: hidden;">
     <div class="col-xs-3 col-sm-2 col-md-1"><a href="<?php echo site_url('home'); ?>"><img class="logo" style="width:auto;height:100px;" src="<?php echo base_url(); ?>image/Logo.jpg"></a></div>
     <div class="col-xs-9 col-sm-10 col-md-11"><a href="<?php echo site_url('home'); ?>"><img class="logoText" style="width:auto;" src="<?php echo base_url(); ?>image/logoText.JPG"></a></div>

@@ -82,8 +82,9 @@ include('header.php');
           <td><?php echo $courier->First_name;  ?></td>
           <td><?php echo $courier->Courier_company;  ?></td>
           <td><?php echo $courier->In_date.' &nbsp;'.$courier->In_time;   ?></td>
-          <td><?php if($courier->Out_date=="null")
-                  echo '<a href=""><button class="form-control btn btn-primary" >Check Out</button></a>';
+          <td><?php if($courier->Out_date=="null"){ ?>
+                  <a href="<?php echo site_url('courier/outentry/'.$courier->Id);?>"><button class="form-control btn btn-primary" >Check Out</button></a>
+                  <?php }
                   else{
                     echo $courier->Out_date.' &nbsp;&nbsp;'.$courier->Out_time;
                   }       

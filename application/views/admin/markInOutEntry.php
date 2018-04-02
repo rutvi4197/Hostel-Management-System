@@ -82,18 +82,19 @@ include('header.php');
 					<td><?php echo $outstudent->Room_no  ?></td>
 					<td><?php echo $outstudent->Out_date ?></td>
 					<td><?php echo $outstudent->Place  ?></td>
-					<td><?php echo $outstudent->Name_of_relative  ?></td>
+	 				<td><?php echo $outstudent->Name_of_relative  ?></td>
 					<td><?php echo $outstudent->Contact_no  ?></td>
-					<td><?php if($outstudent->In_date=='null')
-						{
-						echo '<a href="site_url("attendence/doinentry/'.$outstudent->Student_id.'); "><button type="button" class="form-control btn btn-primary" >In Entry</button></a></td>';
+					<td><?php if($outstudent->In_date=='null'){
+						?>
+						<a href="<?php echo site_url('attendence/doinentry/'.$outstudent->Id);?> "><button type="button" class="form-control btn btn-primary" >In Entry</button></a></td>'
+						<?php 
 						}
 						else
 						{
 							echo $outstudent->In_date;
 						}
 						?>
-					
+					</td>
 					</tr>
 
 					  <?php endforeach;?>
@@ -109,7 +110,7 @@ include('header.php');
 			</div>
 		</div>
 
-		<button type="submit" class="btn btn-primary mb-1 col-sm-2" >Mark</button>
+	
 	</div>
 	<div class="col-sm-3 col-md-3">
 		

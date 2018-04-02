@@ -66,14 +66,13 @@
       <div class="form-group row">
         <label for="city" class="col-sm-4 col-form-label">City</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" name="city">
-            <!--
+         
               <select class="form-control" name="city">
-            <option value="op1">op1</option>
-            <option value="op2">op2</option>
-            <option value="op3">op3</option>
+                <?php foreach ($city as $city): ?>
+            <option value="<?php echo $city->City_id;?>"><?php echo $city->City_name; ?></option>
+            <?php endforeach; ?>
           </select> 
-            -->
+            
         </div>
       </div>
 

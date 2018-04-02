@@ -21,7 +21,7 @@
 <div class="row" style="margin-top: 1%;"> 
   <div class="col-sm-3 col-md-3">
   </div>    
-  <div class="col-sm-6 col-md-6">
+  <div class="col-sm-6 col-md-6"> 
     <div class="col-sm-1 col-md-1"></div>
     <div class="col-sm-10 col-md-10">
     <div class="form-group row">

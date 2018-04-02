@@ -155,5 +155,14 @@ include_once('header.php');
 				<center id="piechart"></center>
 			</div>
 		</div>
+	</div>
+	
+<div class="row">
+	<?php
+
+
+		include_once('footer.php');
+	 ?>
+</div>	
 
 	
