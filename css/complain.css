@@ -1,18 +1,25 @@
-.card:nth-child(odd){
+.card{
 	width:80%;
-	height:150px;
 	border-radius: 10px;
-	border-style:solid;
-	border-width:1px;
+	border-width:3px;
 	border-color:#ddd;
-	background-color: #ddd;
 	margin-left:10%;
 	margin-top:7%;
 	float:left;
+	background-color: #f4f4f4;
+	box-shadow: 2px 2px 2px 2px #bbb;
+}
+
+.card-header{
+	margin-left: 5px; 
+}
+
+.card-body{
+	margin-left: 5px;
 }
 
 .card-title{
-	color: #337ab7 !important;
+	margin-left: 5px;
 }
 
 

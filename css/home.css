@@ -2,22 +2,19 @@
 			width: 300px;
 			float:left;
 			height: 300px;
-			/*margin-left: auto;
-			margin-right: 10px;*/
 		}
 
 		#in-out-entry{
 			width: 300px;
 			height:300px;
 			float:left;
-			/*margin-left: 400px;*/
 		}
 
 		.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
 			z-index: 2;
-    		color:#fff  !important;
-			background-color: #777 !important;
-    		border-color: #777 !important; 
+    		color:#777 !important;
+			background-color: #cbebf6 !important;
+    		border-color: #cbebf6 !important; 
 		}
 
 		.badge {
@@ -27,11 +24,11 @@
 		    font-size: 12px;
 		    font-weight: 700;
 		    line-height: 1;
-		    color: #777 !important;
+		    color: #fff !important;
 		    text-align: center;
 		    white-space: nowrap;
 		    vertical-align: baseline;
-		    background-color: #cbebf6 !important;
+		    background-color: #777 !important;
 		    border-radius:10px;
 		}
 
@@ -42,3 +39,6 @@
 			border-color:#ddd; 
 		}
 
+		.list-group-item{
+			width:100%;
+		}

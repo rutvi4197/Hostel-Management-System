@@ -132,16 +132,18 @@ include_once('header.php');
 				</ul>
 			</div>
 
-			<ul id="complains" class="list-group">
-			  <li class="list-group-item active">Complains</li>
-			  <marquee direction="up">
-			  <li class="list-group-item">Complain1</li>
-			  <li class="list-group-item">Complain2</li>
-			  <li class="list-group-item">Complain3</li>
-			  <li class="list-group-item">Complain4</li>
-			  <li class="list-group-item">Complain5</li>
-			</marquee>
-			</ul>
+			<div id="complains">
+				<ul class="list-group">
+					  <li class="list-group-item active">Complains</li>
+					  <marquee direction="up">
+						  <li class="list-group-item">Complain1</li>
+						  <li class="list-group-item">Complain2</li>
+						  <li class="list-group-item">Complain3</li>
+						  <li class="list-group-item">Complain4</li>
+						  <li class="list-group-item">Complain5</li>
+					  </marquee>
+				</ul>
+			</div>
 		</div>	
 
 		<div class="col-sm-8">
