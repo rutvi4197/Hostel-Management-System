@@ -87,7 +87,7 @@
 include_once('header.php');
 ?>
 	
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>canvasjs/loader.js"></script>
 
 	<script type="text/javascript">
 
