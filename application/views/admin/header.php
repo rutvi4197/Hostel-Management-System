@@ -3,7 +3,7 @@
   <link  href="<?php echo base_url(); ?>bootstrapcss/font-awesome.min.css" rel="stylesheet">
   <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
   <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
-  <link href="<?php echo base_url(); ?>css/footer.css" rel="stylesheet" type="text/css" >
+  <link href="<?php echo base_url(); ?>css/footer.css" rel="stylesheet">
   <script src="<?php echo base_url(); ?>canvasjs/canvasjs.min.js"></script>
   
 
