@@ -1,0 +1,44 @@
+		#att{
+			width: 300px;
+			float:left;
+			height: 300px;
+		}
+
+		#in-out-entry{
+			width: 300px;
+			height:300px;
+			float:left;
+		}
+
+		.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
+			z-index: 2;
+    		color:#777 !important;
+			background-color: #cbebf6 !important;
+    		border-color: #cbebf6 !important; 
+		}
+
+		.badge {
+		    display: inline-block;
+		    min-width: 10px;
+		    padding: 3px 7px;
+		    font-size: 12px;
+		    font-weight: 700;
+		    line-height: 1;
+		    color: #fff !important;
+		    text-align: center;
+		    white-space: nowrap;
+		    vertical-align: baseline;
+		    background-color: #777 !important;
+		    border-radius:10px;
+		}
+
+		#complains{
+			border-radius: 10px;
+			border-style:solid;
+			border-width:1px;
+			border-color:#ddd; 
+		}
+
+		.list-group-item{
+			width:100%;
+		}

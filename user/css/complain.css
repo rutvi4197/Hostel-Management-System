@@ -1,0 +1,25 @@
+.card{
+	width:80%;
+	border-radius: 10px;
+	border-width:3px;
+	border-color:#ddd;
+	margin-left:10%;
+	margin-top:7%;
+	float:left;
+	background-color: #f4f4f4;
+	box-shadow: 2px 2px 2px 2px #bbb;
+}
+
+.card-header{
+	margin-left: 5px; 
+}
+
+.card-body{
+	margin-left: 5px;
+}
+
+.card-title{
+	margin-left: 5px;
+}
+
+
