@@ -21,7 +21,7 @@ class Homepage extends CI_Model
 
 	public function getcomplain()
 	{
-		$q=$this->db->query("select * from complaint as c,type_of_complaint as tc where c.Status=0 and c.Type_of_complaint=tc.Type_id order by complaint_id desc");
+		$q=$this->db->query("select * from complaint as c,Type_of_complaint as tc,student as s where c.Type_of_complaint=tc.Type_id and Status=0 and s.Student_id=c.Student_id order by complaint_id desc");
 		return $q->result();
 	}
 
