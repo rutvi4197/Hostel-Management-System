@@ -9,11 +9,11 @@
 
 <?php include('header.php');?>
 <form action="<?php echo site_url('addattendence/doattendence') ?>" method="post">   
-<div class="row" style="margin-top: 10%;"> 
+<div class="row" style="margin-top: 1%;"> 
   <div class="col-sm-2 col-md-2">
   </div>    
   <div class="col-sm-8 col-md-8">
-   <center> <label for="addStudentAttendance"><h3>Add Student Attendance</h3></label></center> 
+   <center> <label for="addStudentAttendance"><h3><b>Add Student Attendance</b></h3></label></center> 
    </div>
   <div class="col-sm-2 col-md-2">
   </div>    

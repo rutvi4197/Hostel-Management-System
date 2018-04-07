@@ -39,7 +39,7 @@
     <div class="form-group row">
         <label for="staffName" class="col-sm-4 col-form-label">Name</label>
         <div class="col-sm-8">
-          <input class="form-control" name="staffName" type="text" placeholder="Staff Name" pattern="[^0-9]+" title="Invalid input" required>
+          <input class="form-control" name="staffName" type="text" placeholder="Staff Name" pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
         </div>
     </div>
   <div class="form-group row">

@@ -35,13 +35,13 @@
 	 <div class="form-group row">
         <label for="fatherName" class="col-sm-4 col-form-label">Father's Name</label>
         <div class="col-sm-8">
-          <input class="form-control" name="fatherName" type="text" placeholder="Father's Name" pattern="[^0-9]+" title="Invalid input" required>
+          <input class="form-control" name="fatherName" type="text" placeholder="Father's Name" pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
         </div>
     </div>
 <div class="form-group row">
         <label for="motherName" class="col-sm-4 col-form-label">Mother's Name</label>
         <div class="col-sm-8">
-          <input class="form-control" name="motherName" type="text" placeholder="Mother's Name" pattern="[^0-9]+" title="Invalid input" required>
+          <input class="form-control" name="motherName" type="text" placeholder="Mother's Name" pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
         </div>
     </div>
 
