@@ -28,7 +28,9 @@
         <form class="login-container" action="<?php echo site_url('login/loginverification') ?>" method="post">
         <p><input type="text" placeholder="ID" name="id"></p>
         <p><input type="password" placeholder="Password" name="password"></p>
-        <p><input type="submit" value="Log in"></p>
+        <p><input type="submit" value="Log in">
+            <a href="<?php echo site_url('registration'); ?>" class="pull-right"  style="color:#000051;font-size:10px;">Sign Up Here</a>
+        </p>
         </form>
         </div>
     </div>
