@@ -23,7 +23,7 @@
   <div class="col-sm-2 col-md-2">
   </div>    
   <div class="col-sm-8 col-md-8">
-	  <center> <label for="registration"><h3><b>Registration</b></h3></label></center> 
+	  <center> <label for="registration"><h3><b> Student Registration</b></h3></label></center> 
    </div>
   <div class="col-sm-2 col-md-2">
   </div>    
@@ -44,12 +44,38 @@
 				</div>
 		</div>
 	 <div class="form-group row">
-        <label for="studentName" class="col-sm-4 col-form-label">Student Name</label>
+        <label for="firstName" class="col-sm-4 col-form-label">First Name</label>
         <div class="col-sm-8">
-          <input class="form-control" name="studentName" type="text" placeholder="Student Name"  pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
+          <input class="form-control" name="firstName" type="text" placeholder="First Name"  pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
         </div>
     </div>
-<div class="form-group row">
+
+     <div class="form-group row">
+        <label for="lastName" class="col-sm-4 col-form-label">Last Name</label>
+        <div class="col-sm-8">
+          <input class="form-control" name="lastName" type="text" placeholder="Last Name"  pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
+        </div>
+    </div>
+
+     <div class="form-group row">
+        <label for="bloodGroup" class="col-sm-4 col-form-label">Blood Group</label>
+        <div class="col-sm-8">
+          <input class="form-control" name="bloodGroup" type="text" placeholder="Blood group" pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="isHMC" class="col-sm-4 col-form-label">HMC Member?</label>
+        <div class="col-sm-8">
+            <div class="radio" name="isHMC"> 
+      <label><input type="radio" name="side" value="1" required checked>Yes</label>
+  
+      <label><input type="radio" name="side" value="0">No</label>
+    </div>
+        </div>
+    </div>
+	
+     <div class="form-group row">
 			<label for="dateOfBirth" class="col-sm-4 col-form-label">Date of Birth</label>
 			<div class="col-sm-8">
 				<input class="form-control" name="studentDOB" type="text" placeholder="Date of Birth" required>
@@ -68,7 +94,7 @@
         </div>
     </div>
 	<div class="form-group row">
-        <label for="side" class="col-sm-4 col-form-label">Side</label>
+        <label for="side" class="col-sm-4 col-form-label">Room Side</label>
         <div class="col-sm-8">
             <div class="radio" name="side"> 
       <label><input type="radio" name="side" value="left" required checked>Left</label>

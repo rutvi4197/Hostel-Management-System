@@ -23,7 +23,7 @@
   <div class="col-sm-2 col-md-2">
   </div>    
   <div class="col-sm-8 col-md-8">
-	  <center> <label for="registration"><h3><b>Registration</b></h3></label></center> 
+	  <center> <label for="registration"><h3><b>Student Registration</b></h3></label></center> 
    </div>
   <div class="col-sm-2 col-md-2">
   </div>    
@@ -39,7 +39,7 @@
 		<div class="col-sm-1 col-md-1"></div>
 		<div class="col-sm-10 col-md-10">
 <div class="form-group row">
-        <label for="parentDetail" class="col-sm-4 col-form-label" style="font-size:110%;">Parent's Details</label>
+        <center><label for="parentDetail" class="col-sm-12 col-form-label"><h4>Parent's Details</h4></label></center>
    
   </div>  
 	 <div class="form-group row">
@@ -57,7 +57,7 @@
 
 	
  <div class="form-group row">
-        <label for="studentContact" class="col-sm-4 col-form-label">Contact NO</label>
+        <label for="studentContact" class="col-sm-4 col-form-label"> Parent Contact Number</label>
         <div class="col-sm-8">
           <input type="text" class="form-control" name="parentContact" placeholder="Contact Number" pattern="[0-9]{10}" title="Ten digit phone number" required>
         </div>
