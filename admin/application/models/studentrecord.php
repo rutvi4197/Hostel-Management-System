@@ -28,4 +28,44 @@ class Studentrecord extends CI_Model
 		$q=$this->db->query("select * from room where Room_no like '$optradio$floor%'");
 		return $q->result();
 	}
+
+
+	public function approvestudentdetail()
+	{
+		$q=$this->db->query("select * from student where valid=0");
+		return $q->result();
+	}
+
+
+	public function updatestudentdetail($id)
+	{
+		$q=$this->db->query("update student set valid=1 where Student_id='$id'");
+		if($this->db->affected_rows() > 0)
+				return true;
+			else
+				return false;
+	}
+
+	public function deletestudent($id)
+	{
+		$q=$this->db->query("delete from student  where Student_id='$id'");
+		if($this->db->affected_rows() > 0)
+				return true;
+			else
+				return false;
+	}
+	public function leavestudentdetail()
+	{
+		$q=$this->db->query("select * from checkout where Staff_id=0");
+		return $q->result();
+	}
+
+	public function checkoutstudent($id,$staffid)
+	{
+		$q=$this->db->query("update checkout set Staff_id='$staffid' where Id='$id'");
+		if($this->db->affected_rows() > 0)
+				return true;
+			else
+				return false;
+	}
 }

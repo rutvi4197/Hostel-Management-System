@@ -27,8 +27,60 @@ class Studentdetail extends CI_Controller {
 		$this->load->view('admin/roomDetails',$arr);
 		
 	}
+	public function approval()
+	{
+		$this->load->model('studentrecord');
+		$arr['student']=$this->studentrecord->approvestudentdetail();
 
-	
-	
-	
+		$this->load->view('admin/approvestudent',$arr);
+	}	
+
+
+	public function approvestudent($id)
+	{
+		$this->load->model('studentrecord');
+		if($this->studentrecord->updatestudentdetail($id))
+		{
+			redirect('Studentdetail/approval');
+		}
+		else
+			redirect('Studentdetail/approval');
+
+		
+	}
+
+
+	public function disapprovestudent($id)
+	{
+		$this->load->model('studentrecord');
+		if($this->studentrecord->deletestudent($id))
+		{
+			redirect('Studentdetail/approval');
+		}
+		else
+			redirect('Studentdetail/approval');
+
+		
+	}
+	public function leave()
+	{
+		$this->load->model('studentrecord');
+		$arr['student']=$this->studentrecord->leavestudentdetail();
+
+		$this->load->view('admin/leaveapprove',$arr);
+	}
+	public function leavestudent($id)
+	{
+		$staffid=$this->session->userdata('id');
+
+		$this->load->model('studentrecord');
+		if($this->studentrecord->checkoutstudent($id,$staffid))
+		{
+			redirect('Studentdetail/leave');
+		}
+		else
+			redirect('Studentdetail/leave');
+
+		
+	}
 }

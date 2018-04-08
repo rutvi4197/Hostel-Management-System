@@ -72,6 +72,8 @@
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-user"></span>Student<span class="caret"></span></a>
           <ul class="dropdown-menu">
+            <li><a href="<?php echo site_url('studentdetail/approval') ?>">Student approval</a></li>
+            <li><a href="<?php echo site_url('studentdetail/leave') ?>">Leave approval</a></li>
             <li><a href="<?php echo site_url('studentdetail/viewroom') ?>">Room Details</a></li>
             <li><a href="<?php echo site_url('studentdetail/viewstudentdetails') ?>">Student Details</a></li> 
           </ul>
