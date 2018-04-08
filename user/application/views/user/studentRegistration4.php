@@ -21,7 +21,7 @@
   <div class="col-sm-2 col-md-2">
   </div>    
   <div class="col-sm-8 col-md-8">
-	  <center> <label for="registration"><h3><b>Registration</b></h3></label></center> 
+	  <center> <label for="registration"><h3><b>Student Registration</b></h3></label></center> 
    </div>
   <div class="col-sm-2 col-md-2">
   </div>    
@@ -35,7 +35,7 @@
 		<div class="col-sm-1 col-md-1"></div>
 		<div class="col-sm-10 col-md-10">
 <div class="form-group row">
-        <label for="password" class="col-sm-4 col-form-label" style="font-size:110%;">Enter Password</label>
+       <center> <label for="password" class="col-sm-12 col-form-label"><h4>Password Details<h4></label></center>
    
   </div>  
 	  <div class="form-group row">

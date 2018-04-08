@@ -23,7 +23,7 @@
   <div class="col-sm-2 col-md-2">
   </div>    
   <div class="col-sm-8 col-md-8">
-	  <center> <label for="registration"><h3><b>Registration</b></h3></label></center> 
+	  <center> <label for="registration"><h3><b> Student Registration</b></h3></label></center> 
    </div>
   <div class="col-sm-2 col-md-2">
   </div>    
@@ -44,19 +44,28 @@
 				</div>
 		</div>
 	 <div class="form-group row">
+<<<<<<< HEAD
         <label for="studentName" class="col-sm-4 col-form-label">Student First Name</label>
+=======
+        <label for="firstName" class="col-sm-4 col-form-label">First Name</label>
+>>>>>>> 415188b58da11051c98caa8b279e86ea76733125
         <div class="col-sm-8">
-          <input class="form-control" name="studentName" type="text" placeholder="Student Name"  pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
+          <input class="form-control" name="firstName" type="text" placeholder="First Name"  pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
         </div>
     </div>
 
      <div class="form-group row">
+
         <label for="studentName" class="col-sm-4 col-form-label">Student Last Name</label>
         <div class="col-sm-8">
           <input class="form-control" name="studentlastname" type="text" placeholder="Student Name"  pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
         </div>
     </div>
-<div class="form-group row">
+
+
+    
+	
+     <div class="form-group row">
 			<label for="dateOfBirth" class="col-sm-4 col-form-label">Date of Birth</label>
 			<div class="col-sm-8">
 				<input class="form-control" name="studentDOB" type="text" placeholder="Date of Birth" required>
@@ -74,7 +83,7 @@
           <input class="form-control" name="studentCourse" type="text" placeholder="Course Name" pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
         </div>
     </div>
-	
+
 	
 		<div class="form-group row">
 			<div class="col-sm-4">
