@@ -24,7 +24,7 @@
 }
 .footer h3 {
   border-bottom: 1px solid #BAC1C8;
-  color: #54697E;
+  color: #000051;
   font-size: 18px;
   font-weight: 600;
   line-height: 27px;
@@ -127,6 +127,7 @@
   border-top: 1px solid #DDDDDD;
   padding-top: 10px;
   padding-bottom: 10px;
+  text-align: center;
 }
 .footer-bottom p.pull-left {
   padding-top: 6px;

@@ -1,67 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <title>HOR WOMEN</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-<?php include('header.php');?>
-
-
-<div class="row" style="margin-top: 1%;"> 
-  <div class="col-sm-2 col-md-2">
-  </div>    
-  <div class="col-sm-8 col-md-8">
-	  <center> <label for="checkComplaintStatus"><h3><b>Check Complaint Status</b></h3></label></center> 
-   </div>
-  <div class="col-sm-2 col-md-2">
-  </div>    
-</div>
-
-
-
-<form echo site_url('addattendence/doattendence') ?>" method="post">   
-<div class="row" style="margin-top: 1%;"> 
-	<div class="col-sm-3 col-md-3">
-	</div>		
-	<div class="col-sm-6 col-md-6">
-		<div class="col-sm-1 col-md-1"></div>
-		<div class="col-sm-10 col-md-10">
-		<div class="form-group row">
-				<label for="studentID" class="col-sm-4 col-form-label">Student ID</label>
-				<div class="col-sm-8">
-					<input class="form-control" name="studentid" type="text" placeholder="Student ID" pattern="[0-9]{9}" title="Nine digit Student ID" required>
-				</div>
-		</div>
+	<title>Women's Hall of Residence	
+	</title>
 	
+	<link  href="<?php echo base_url(); ?>css/complain.css" rel="stylesheet">
+</head>
 
-		<div class="form-group row">
-			<div class="col-sm-4">
-			</div>
-			<div class="col-sm-8">
-			<button type="submit" class="btn btn-primary mb-1" style="margin:2% 0%;padding:2% 4%;">Check Status</button>
-			</div>
-			
-		</div>
- 	<div class="form-group row">
-
-		 <div class="col-sm-12">
-			<textarea class="form-control" rows="3" id="status" name="status" placeholder="Status" readonly></textarea>
-			</div>
-	</div> 
-		</div>
-		
+<body>
+  	<?php
+include_once('header.php');
+?>
+	<div class="row" style="margin-top:2%">
+		<?php 
+			foreach ($complain as $complain) :
+		?>
+		<div class="col-sm-4">
+			<div class="card">
+				<div class="card-header">
+					<h2><span class="label label-primary"><?php echo $complain->Type_name; ?></span></h2>	
+				</div>
+		  		<div class="card-body">
+		  			<div class="card-title">
+		  				<h5><em><?php echo $complain->Date; ?></em></h5>
+		  			</div>
+		    		<p class="card-text"><i><b><?php echo $complain->Description; ?></b></i></p>
+		    		<h5><span class="label label-default"><?php echo $complain->First_name; ?></span><span style="margin-left:3px;"class="label label-default"><?php echo $complain->Room_no; ?></span></h5>
+		    		<a href="<?php echo site_url('complain/changestatus/'.$complain->complaint_id) ?>" class="btn btn-default" style="float:right;margin-right: 10px;margin-bottom: 10px;box-shadow: 1px 1px #ddd;">Change Status</a>
+		    	</div>
+		    </div>
+  		</div>
+  	<?php endforeach; ?>
 	</div>
-	<div class="col-sm-3 col-md-3">
-		
-	</div>		
-</div>
- 
-
-</form>
-
-
-</body>
-</html>
+	</body>
+	</html>	

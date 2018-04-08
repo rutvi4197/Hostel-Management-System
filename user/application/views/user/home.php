@@ -9,7 +9,7 @@
 <body>
 <?php include('header.php');?>
 
-<div class="container">
+<div class="container" style="width:100%">
 	<div class="w3-content w3-display-container" style="margin-top:2%;">
   <img class="mySlides" src="<?php echo base_url(); ?>image/b1.jpg" style="width:100%;height:400px;">
   <img class="mySlides" src="<?php echo base_url(); ?>image/b2.jpg" style="width:100%;height:400px;">
@@ -38,6 +38,8 @@ function showDivs(n) {
 </script>
 
 </div>	
+<br/>
+<?php include('footer.php');?>
 
 
 

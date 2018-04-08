@@ -1,14 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>HOR WOMEN</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link  href="<?php echo base_url(); ?>bootstrapcss/bootstrap.min.css" rel="stylesheet">
+  <link  href="<?php echo base_url(); ?>bootstrapcss/font-awesome.min.css" rel="stylesheet">
+  <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
+  <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
+  <link href="<?php echo base_url(); ?>css/login.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
 
-<?php include('header.php');?>
+
+<div class="row">
+    <div class="col-xs-3 col-sm-2 col-md-1"><img class="logo" style="width:auto;height:100px;" src="<?php echo base_url(); ?>image/Logo.jpg"></div>
+    <div class="col-xs-9 col-sm-10 col-md-11"><img class="logoText" src="<?php echo base_url(); ?>image/logoText.JPG"></div>
+</div>
+
+
 <div class="row" style="margin-top: 1%;"> 
   <div class="col-sm-2 col-md-2">
   </div>    

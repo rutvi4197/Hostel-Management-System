@@ -1,44 +1,41 @@
 <footer>
-    <div class="footer" id="footer">
+    <div class="footer" id="footer" style="background:#cbebf6;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                    <h3> Lorem Ipsum </h3>
+                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12">
+                    <h3>HoR Women</h3>
                     <ul>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Absent Student Record</a> </li>
+                        <li> <a href="#"> View Complain</a> </li>
+                        <li> <a href="#"> Room Details </a> </li>
+                        <li> <a href="#"> Student Details</a> </li>
                     </ul>
                 </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                    <h3> Lorem Ipsum </h3>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h3>Student Warden</h3>
                     <ul>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> Palak : +91987654321</li>
+                        <li> Shubhangi : +91987654321</li>
+                        <li></li>
+                        <li></li>
                     </ul>
                 </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                    <h3> Lorem Ipsum </h3>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h3>Warden</h3>
                     <ul>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li>Shweta garg</li>
+                        
                     </ul>
                 </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                    <h3> Lorem Ipsum </h3>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <h3>Hostel Supervisor</h3>
                     <ul>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
-                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li>Parmar : +91987654321</li>
+                        <li>Sawant : +91987654321</li>
+                        
                     </ul>
                 </div>
-                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
+                <!--<div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
                     <h3> Lorem Ipsum </h3>
                     <ul>
                         <li>
@@ -49,7 +46,7 @@
                         </li>
                     </ul>
                     
-                </div>
+                </div>-->
             </div>
             <!--/.row--> 
         </div>
@@ -59,7 +56,7 @@
     
     <div class="footer-bottom">
         <div class="container">
-            <p class="pull-left"> Copyright © Footer 2014. All right reserved. </p>
+            <p class="pull-left"><center> Copyright © Footer 2018. All right reserved.</center> </p>
             <!--<div class="pull-right">
                 <ul class="nav nav-pills payments">
                     <li><i class="fa fa-cc-visa"></i></li>
