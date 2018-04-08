@@ -31,7 +31,7 @@
 
 
 
-<form action="<?php echo site_url('addattendence/doattendence') ?>" method="post">   
+<form action="<?php echo site_url('registration/form3') ?>" method="post">   
 <div class="row" style="margin-top: 1%;"> 
 	<div class="col-sm-3 col-md-3">
 	</div>		
@@ -68,7 +68,7 @@
 			<div class="col-sm-4">
 			</div>
 			<div class="col-sm-8">
-				<button type="submit" class="btn btn-primary mb-1" style="margin:2% 0%;padding:2% 4%;">Previous</button>		
+				
 			<button type="submit" class="btn btn-primary mb-1" style="margin:2% 0%;padding:2% 4%;">Next</button>
 			</div>
 			

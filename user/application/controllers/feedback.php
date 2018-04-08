@@ -9,4 +9,9 @@ class Feedback extends CI_Controller {
 
 		$this->load->view('user/feedbackForm');
 	}	
+	public function addfeedback()
+	{
+
+		redirect('home');
+	}
 }

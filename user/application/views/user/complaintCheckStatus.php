@@ -26,7 +26,12 @@ include_once('header.php');
 		  			</div>
 		    		<p class="card-text"><i><b><?php echo $complain->Description; ?></b></i></p>
 		    		<h5><span class="label label-default"><?php echo $complain->First_name; ?></span><span style="margin-left:3px;"class="label label-default"><?php echo $complain->Room_no; ?></span></h5>
-		    		<a href="<?php echo site_url('complain/changestatus/'.$complain->complaint_id) ?>" class="btn btn-default" style="float:right;margin-right: 10px;margin-bottom: 10px;box-shadow: 1px 1px #ddd;">Change Status</a>
+		    		<a class="btn btn-default" style="float:right;margin-right: 10px;margin-bottom: 10px;box-shadow: 1px 1px #ddd;"><?php if($complain->Status==0)
+		    												echo "Pending";
+		    												else
+		    												 echo "Solved";
+
+		    												 ?></a>
 		    	</div>
 		    </div>
   		</div>

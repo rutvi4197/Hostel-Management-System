@@ -30,7 +30,7 @@
 </div>
 
 
-<form action="<?php echo site_url('complain/docomplain') ?>" method="post">   
+<form action="<?php echo site_url('registration/form1') ?>" method="post">   
 <div class="row" style="margin-top: 1%;"> 
 	<div class="col-sm-3 col-md-3">
 	</div>		
@@ -44,9 +44,16 @@
 				</div>
 		</div>
 	 <div class="form-group row">
-        <label for="studentName" class="col-sm-4 col-form-label">Student Name</label>
+        <label for="studentName" class="col-sm-4 col-form-label">Student First Name</label>
         <div class="col-sm-8">
           <input class="form-control" name="studentName" type="text" placeholder="Student Name"  pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
+        </div>
+    </div>
+
+     <div class="form-group row">
+        <label for="studentName" class="col-sm-4 col-form-label">Student Last Name</label>
+        <div class="col-sm-8">
+          <input class="form-control" name="studentlastname" type="text" placeholder="Student Name"  pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
         </div>
     </div>
 <div class="form-group row">
@@ -67,17 +74,7 @@
           <input class="form-control" name="studentCourse" type="text" placeholder="Course Name" pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
         </div>
     </div>
-	<div class="form-group row">
-        <label for="side" class="col-sm-4 col-form-label">Side</label>
-        <div class="col-sm-8">
-            <div class="radio" name="side"> 
-      <label><input type="radio" name="side" value="left" required checked>Left</label>
-  
-      <label><input type="radio" name="side" value="right">Right</label>
-    </div>
-        </div>
-    </div>
-
+	
 	
 		<div class="form-group row">
 			<div class="col-sm-4">

@@ -30,7 +30,7 @@
 
 
 
-<form action="<?php echo site_url('addattendence/doattendence') ?>" method="post">   
+<form action="<?php echo site_url('registration/form2') ?>" method="post">   
 <div class="row" style="margin-top: 1%;"> 
 	<div class="col-sm-3 col-md-3">
 	</div>		
@@ -53,8 +53,14 @@
           <input class="form-control" name="studentEmail" type="email" placeholder="Student Email" required>
         </div>
     </div>
+       <div class="form-group row">
+        <label  class="col-sm-4 col-form-label">Blood Group</label>
+        <div class="col-sm-8">
+          <input class="form-control" name="studentbg" type="text" placeholder="Student Blood Group" required>
+        </div>
+    </div>
 <div class="form-group row">
-        <label for="permanentAdd" class="col-sm-6 col-form-label" style="font-size:110%;">Permanent Address</label>
+        <label for="permanentAdd" class="col-sm-6 col-form-label" style="font-size:110%;">Address</label>
    
   </div>  
 	<div class="form-group row">
@@ -73,9 +79,12 @@
         <label for="city" class="col-sm-4 col-form-label">City</label>
         <div class="col-sm-8">
          <select class="form-control" name="city">
-			<option value="op1">op1</option>
-			<option value="op2">op2</option>
-			<option value="op3">op3</option>
+          <?php
+            foreach($city as $city):
+
+           ?>
+			<option value="<?php echo $city->City_id ?>"><?php echo $city->City_name; ?></option>
+			<?php endforeach ?>
 		</select> 
         </div>
       </div>
@@ -84,36 +93,37 @@
         <label for="temporaryAdd" class="col-sm-6 col-form-label" style="font-size:110%;">Temporary Address</label>
    
   </div>  
-	<div class="form-group row">
+<div class="form-group row">
         <label for="studentAddress" class="col-sm-4 col-form-label">Address-line1</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" name="Address" placeholder="Address-line1"  required>
+          <input type="text" class="form-control" name="tempAddress" placeholder="Address-line1" required>
         </div>
       </div>
       <div class="form-group row">
         <label for="studentAddress2" class="col-sm-4 col-form-label">Address-line2</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" name="Address2" placeholder="Address-line2"  required>
+          <input type="text" class="form-control" name="tempAddress2" placeholder="Address-line2"  required>
         </div>
       </div>
       <div class="form-group row">
         <label for="city" class="col-sm-4 col-form-label">City</label>
         <div class="col-sm-8">
-         <select class="form-control" name="city">
-			<option value="op1">op1</option>
-			<option value="op2">op2</option>
-			<option value="op3">op3</option>
-		</select> 
+         <select class="form-control" name="tempcity">
+          <?php
+            foreach($tempcity as $tempcity):
+
+           ?>
+      <option value="<?php echo $tempcity->City_id ?>"><?php echo $tempcity->City_name; ?></option>
+      <?php endforeach ?>
+    </select> 
         </div>
       </div>
-
-
 	
 		<div class="form-group row">
 			<div class="col-sm-4">
 			</div>
 			<div class="col-sm-8">
-				<button type="submit" class="btn btn-primary mb-1" style="margin:2% 0%;padding:2% 4%;">Previous</button>		
+					
 			<button type="submit" class="btn btn-primary mb-1" style="margin:2% 0%;padding:2% 4%;">Next</button>
 			</div>
 			

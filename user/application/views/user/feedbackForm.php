@@ -20,7 +20,7 @@
   </div>    
 </div>
 
-<form action="<?php echo site_url('addattendence/doattendence') ?>" method="post">   
+<form action="<?php echo site_url('feedback/addfeedback') ?>" method="post">   
 <div class="row" style="margin-top: 1%;"> 
 	<div class="col-sm-3 col-md-3">
 	</div>		

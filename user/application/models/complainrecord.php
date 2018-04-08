@@ -8,9 +8,9 @@ class Complainrecord extends CI_Model
 		return $q->result();
 	}
 	
-	public function getallcomplain()
+	public function getallcomplain($id)
 	{
-		$q=$this->db->query("select * from complaint as c,Type_of_complaint as tc,student as s where c.Type_of_complaint=tc.Type_id and Status!=0 and s.Student_id=c.Student_id order by c.Type_of_complaint ");
+		$q=$this->db->query("select * from complaint as c,Type_of_complaint as tc,student as s where c.Type_of_complaint=tc.Type_id and c.Student_id='$id' and s.Student_id=c.Student_id order by c.Type_of_complaint ");
 		return $q->result();
 	}
 

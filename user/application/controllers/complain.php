@@ -12,8 +12,11 @@ class Complain extends CI_Controller {
 
 	public function viewcomplain()
 	{
+		$id=$this->session->userdata('id');
+		$this->load->model('complainrecord');
+		$arr['complain']=$this->complainrecord->getallcomplain($id);
 		
-		$this->load->view('user/complaintCheckStatus');
+		$this->load->view('user/complaintCheckStatus',$arr);
 	}
 
 	public function docomplain()
