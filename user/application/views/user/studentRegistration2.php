@@ -69,13 +69,13 @@
         </div>
     </div>
 <div class="form-group row">
-<<<<<<< HEAD
+
         <label for="permanentAdd" class="col-sm-6 col-form-label" style="font-size:110%;">Address</label>
    
-=======
+
        <center> <label for="permanentAdd" class="col-sm-12 col-form-label"><h4>Permanent Address</h4></label>
         </center>
->>>>>>> 415188b58da11051c98caa8b279e86ea76733125
+
   </div>  
 	<div class="form-group row">
         <label for="studentAddress" class="col-sm-4 col-form-label">Address-line1</label>
