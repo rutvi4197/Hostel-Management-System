@@ -69,6 +69,13 @@
         </div>
     </div>
 <div class="form-group row">
+<<<<<<< HEAD
+=======
+
+        <label for="permanentAdd" class="col-sm-6 col-form-label" style="font-size:110%;">Address</label>
+   
+
+>>>>>>> a6fd8fbc51ffe69744627b10941d66d8c0def219
        <center> <label for="permanentAdd" class="col-sm-12 col-form-label"><h4>Permanent Address</h4></label>
         </center>
 

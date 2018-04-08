@@ -44,11 +44,9 @@
 				</div>
 		</div>
 	 <div class="form-group row">
-<<<<<<< HEAD
-        <label for="studentName" class="col-sm-4 col-form-label">Student First Name</label>
-=======
+
+
         <label for="firstName" class="col-sm-4 col-form-label">First Name</label>
->>>>>>> 415188b58da11051c98caa8b279e86ea76733125
         <div class="col-sm-8">
           <input class="form-control" name="firstName" type="text" placeholder="First Name"  pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
         </div>
