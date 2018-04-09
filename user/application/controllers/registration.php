@@ -15,7 +15,7 @@ class Registration extends CI_Controller {
 	public function form1()
 	{
 		$studentid=$this->input->post('studentid');
-		$studentName=$this->input->post('studentName');
+		$studentName=$this->input->post('firstName');
 		$studentlastname=$this->input->post('studentlastname');
 		$studentDOB=$this->input->post('studentDOB');
 		$studentroomno=$this->input->post('studentroomno');
