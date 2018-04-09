@@ -122,7 +122,7 @@ echo $studentid,$studentName,$studentlastname,$parentContact;
 				$this->session->unset_userdata('motherName');
 				$this->session->unset_userdata('parentContact');
 
-				redirect('home');
+				redirect('login');
 			}
 			else
 			{
