@@ -1,5 +1,5 @@
 <footer>
-    <div class="footer" id="footer" style="background:#cbebf6;">
+    <div class="footer page-footer" id="footer" style="background:#cbebf6;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12">
@@ -9,6 +9,7 @@
                         <li> <a href="#"> View Complain</a> </li>
                         <li> <a href="#"> Room Details </a> </li>
                         <li> <a href="#"> Student Details</a> </li>
+                       
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">

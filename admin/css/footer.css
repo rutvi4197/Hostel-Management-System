@@ -8,7 +8,7 @@
   display: block;
 }
 .footer {
-  background:#cbebf6!important;
+  background: #EDEFF1;
   height:auto;
   padding-bottom: 30px;
   position: relative;
@@ -19,12 +19,13 @@
 .footer p {
   margin: 0;
 }
+
 .footer img {
   max-width: 100%;
 }
 .footer h3 {
   border-bottom: 1px solid #BAC1C8;
-  color: #000051;
+  color: #54697E;
   font-size: 18px;
   font-weight: 600;
   line-height: 27px;
@@ -77,11 +78,10 @@
 .newsletter-box {
   overflow: hidden;
 }
-/*.bg-gray {
+.bg-gray {
   background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
   box-shadow: 0 1px 0 #B4B3B3;
 }
-*/
 .social li {
   background: none repeat scroll 0 0 #B5B5B5;
   border: 2px solid #B5B5B5;
@@ -127,11 +127,14 @@
   border-top: 1px solid #DDDDDD;
   padding-top: 10px;
   padding-bottom: 10px;
-  text-align: center;
 }
 .footer-bottom p.pull-left {
   padding-top: 6px;
 }
 .payments {
   font-size: 1.5em; 
+}
+
+@media all and (max-width:450px){
+.footer {padding-left:5%!important;}
 }

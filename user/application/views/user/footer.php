@@ -1,14 +1,14 @@
 <footer>
-    <div class="footer" id="footer" style="background:#cbebf6;">
+    <div class="footer page-footer" id="footer" style="background:#cbebf6;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12">
+                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 pt-4 mt-4">
                     <h3>HoR Women</h3>
                     <ul>
-                        <li> <a href="#"> Absent Student Record</a> </li>
-                        <li> <a href="#"> View Complain</a> </li>
-                        <li> <a href="#"> Room Details </a> </li>
-                        <li> <a href="#"> Student Details</a> </li>
+                        <li> <a href="#"> View Status of complain</a> </li>
+                        <li> <a href="#"> Feedback</a> </li>
+                        <li> <a href="#"> Hostel leaving form </a> </li>
+                       
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">

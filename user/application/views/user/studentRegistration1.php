@@ -54,7 +54,7 @@
 
      <div class="form-group row">
 
-        <label for="studentName" class="col-sm-4 col-form-label">Student Last Name</label>
+        <label for="studentName" class="col-sm-4 col-form-label">Last Name</label>
         <div class="col-sm-8">
           <input class="form-control" name="studentlastname" type="text" placeholder="Student Name"  pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
         </div>
@@ -66,7 +66,7 @@
      <div class="form-group row">
 			<label for="dateOfBirth" class="col-sm-4 col-form-label">Date of Birth</label>
 			<div class="col-sm-8">
-				<input class="form-control" name="studentDOB" type="text" placeholder="Date of Birth" required>
+				<input class="form-control" name="studentDOB" type="text" placeholder="Date of Birth '11/12/13' format" required>
 			</div>
 		</div>	
 	<div class="form-group row">
