@@ -3,7 +3,7 @@ class Studentattendence extends CI_Model
 {
 	public function absentstudentdetail($date)
 	{
-		$q=$this->db->query("select DISTINCT  * from student where Student_id NOT IN (select Student_id from attendence where Date='$date') and Student_id NOT IN (select Student_id from in_out where In_date=' ') ");
+		$q=$this->db->query("select DISTINCT  * from student where Student_id NOT IN (select Student_id from attendence where Date='$date') and Student_id NOT IN (select Student_id from in_out where In_date='null') ");
 		return $q->result();
 	}
 

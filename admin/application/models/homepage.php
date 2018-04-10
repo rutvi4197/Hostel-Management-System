@@ -9,7 +9,7 @@ class Homepage extends CI_Model
 	public function getabsent($date)
 	{
 
-			$q=$this->db->query("select count(*)'absent' from student as s,attendence as a,in_out as i where s.Student_id!=a.Student_id and s.Student_id!=i.Student_id and i.in_date='null'  and a.Date='$date' ");
+			$q=$this->db->query("select DISTINCT  count(*)'absent' from student where Student_id NOT IN (select Student_id from attendence where Date='$date') and Student_id NOT IN (select Student_id from in_out where In_date='null') ");
 		return $q->result();
 
 	}
