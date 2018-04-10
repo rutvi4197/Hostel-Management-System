@@ -1,19 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.9
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Apr 08, 2018 at 12:28 PM
--- Server version: 5.1.53
--- PHP Version: 5.3.4
+-- Host: 127.0.0.1
+-- Generation Time: Apr 09, 2018 at 07:55 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.20
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `hostel_management`
@@ -25,27 +26,19 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `attendence`
 --
 
-CREATE TABLE IF NOT EXISTS `attendence` (
-  `Att_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `attendence` (
+  `Att_id` int(11) NOT NULL,
   `Student_id` int(11) NOT NULL,
-  `Date` varchar(10) NOT NULL,
-  PRIMARY KEY (`Att_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+  `Date` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `attendence`
 --
 
 INSERT INTO `attendence` (`Att_id`, `Student_id`, `Date`) VALUES
-(1, 201712016, '21/01/2018'),
-(2, 201712035, '24/01/2018'),
-(3, 201712022, '02/02/2018'),
-(4, 201712022, '07/01/2018'),
-(5, 201712016, '09/01/2018'),
-(6, 201712039, '26/03/2018'),
-(7, 201712035, '27/03/2018'),
-(8, 201712022, '27/03/2018'),
-(9, 201712039, '27/03/2018');
+(11, 201712051, '09/04/2018'),
+(12, 201712082, '09/04/2018');
 
 -- --------------------------------------------------------
 
@@ -53,16 +46,10 @@ INSERT INTO `attendence` (`Att_id`, `Student_id`, `Date`) VALUES
 -- Table structure for table `bulletin`
 --
 
-CREATE TABLE IF NOT EXISTS `bulletin` (
-  `Image_id` int(11) NOT NULL AUTO_INCREMENT,
-  `Imagesrc` varchar(50) NOT NULL,
-  PRIMARY KEY (`Image_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `bulletin`
---
-
+CREATE TABLE `bulletin` (
+  `Image_id` int(11) NOT NULL,
+  `Imagesrc` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -70,23 +57,22 @@ CREATE TABLE IF NOT EXISTS `bulletin` (
 -- Table structure for table `checkout`
 --
 
-CREATE TABLE IF NOT EXISTS `checkout` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `checkout` (
+  `Id` int(11) NOT NULL,
   `Student_id` int(11) NOT NULL,
   `Student_name` varchar(20) NOT NULL,
   `Room_no` varchar(11) NOT NULL,
   `Out_date` varchar(10) NOT NULL,
   `Out_time` time NOT NULL,
-  `Staff_id` int(11) NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+  `Staff_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `checkout`
 --
 
 INSERT INTO `checkout` (`Id`, `Student_id`, `Student_name`, `Room_no`, `Out_date`, `Out_time`, `Staff_id`) VALUES
-(1, 201712016, 'vidvata', 'j101', '10/01/2018', '18:45:00', 0);
+(2, 201712082, 'Shikha', 'k217', '09/04/2018', '00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -94,12 +80,11 @@ INSERT INTO `checkout` (`Id`, `Student_id`, `Student_name`, `Room_no`, `Out_date
 -- Table structure for table `city`
 --
 
-CREATE TABLE IF NOT EXISTS `city` (
-  `City_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `city` (
+  `City_id` int(11) NOT NULL,
   `City_name` varchar(20) NOT NULL,
-  `State_id` int(11) NOT NULL,
-  PRIMARY KEY (`City_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+  `State_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `city`
@@ -133,27 +118,25 @@ INSERT INTO `city` (`City_id`, `City_name`, `State_id`) VALUES
 -- Table structure for table `complaint`
 --
 
-CREATE TABLE IF NOT EXISTS `complaint` (
-  `complaint_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `complaint` (
+  `complaint_id` int(11) NOT NULL,
   `Student_id` int(11) NOT NULL,
   `Type_of_complaint` int(20) NOT NULL,
   `Description` varchar(500) NOT NULL,
   `Date` varchar(10) NOT NULL,
-  `Status` tinyint(11) NOT NULL,
-  PRIMARY KEY (`complaint_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+  `Status` tinyint(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `complaint`
 --
 
 INSERT INTO `complaint` (`complaint_id`, `Student_id`, `Type_of_complaint`, `Description`, `Date`, `Status`) VALUES
-(1, 201712022, 3, 'water shortage', '07/01/2018', 1),
-(2, 201712016, 2, 'blinking light.', '31/01/2018', 0),
-(3, 201712035, 2, 'broken table', '22/02/2018', 0),
-(4, 201712111, 1, 'Student of k311 is making noise', '21/01/2018', 0),
-(5, 201712022, 3, 'wash room not clean of 1st floor', '07/03/2018', 0),
-(6, 201712039, 1, 'hiiiiiiioi', '08/04/2018', 0);
+(1, 201712051, 3, 'water shortage', '07/01/2018', 1),
+(2, 201712052, 2, 'blinking light.', '31/01/2018', 0),
+(3, 201712039, 2, 'broken table', '22/02/2018', 0),
+(4, 201712102, 1, 'Student of k311 is making noise', '21/01/2018', 0),
+(5, 201712089, 3, 'wash room not clean of 1st floor', '07/03/2018', 0);
 
 -- --------------------------------------------------------
 
@@ -161,11 +144,10 @@ INSERT INTO `complaint` (`complaint_id`, `Student_id`, `Type_of_complaint`, `Des
 -- Table structure for table `country`
 --
 
-CREATE TABLE IF NOT EXISTS `country` (
-  `Country_id` int(11) NOT NULL AUTO_INCREMENT,
-  `Country_name` varchar(30) NOT NULL,
-  PRIMARY KEY (`Country_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+CREATE TABLE `country` (
+  `Country_id` int(11) NOT NULL,
+  `Country_name` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `country`
@@ -180,8 +162,8 @@ INSERT INTO `country` (`Country_id`, `Country_name`) VALUES
 -- Table structure for table `courier`
 --
 
-CREATE TABLE IF NOT EXISTS `courier` (
-  `Id` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `courier` (
+  `Id` int(10) NOT NULL,
   `In_time` time NOT NULL,
   `In_date` varchar(15) NOT NULL,
   `Student_id` int(11) NOT NULL,
@@ -189,20 +171,20 @@ CREATE TABLE IF NOT EXISTS `courier` (
   `Room_no` varchar(10) NOT NULL,
   `Out_time` time NOT NULL,
   `Out_date` varchar(12) NOT NULL,
-  `Staff_id` int(11) NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+  `Staff_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `courier`
 --
 
 INSERT INTO `courier` (`Id`, `In_time`, `In_date`, `Student_id`, `Courier_company`, `Room_no`, `Out_time`, `Out_date`, `Staff_id`) VALUES
-(1, '11:00:00', '17/02/2018', 201712016, 'Blue dart', 'j101', '15:00:00', '17/02/2018', 2),
-(2, '12:00:00', '20/02/2018', 201712111, 'Amazon', 'k205', '18:00:00', '20/02/2018', 3),
-(3, '13:00:00', '18/03/2018', 201712016, '', 'j101', '19:00:00', '18/03/2018', 3),
-(4, '12:00:00', '17/03/2018', 201712111, '', 'k205', '16:22:02', '31/03/2018', 3),
-(7, '15:50:33', '31/03/2018', 201712039, 'flipkart', 'k306', '00:00:00', 'null', 1);
+(1, '11:00:00', '17/02/2018', 201712039, 'Blue dart', 'k302', '15:00:00', '17/02/2018', 2),
+(2, '12:00:00', '20/02/2018', 201712035, 'Amazon', 'k223', '18:00:00', '20/02/2018', 3),
+(3, '13:00:00', '18/03/2018', 201712051, 'SSS', 'k204', '19:00:00', '18/03/2018', 3),
+(4, '12:00:00', '17/03/2018', 201712052, 'Shein', 'k302', '16:22:02', '31/03/2018', 3),
+(7, '15:50:33', '31/03/2018', 201712102, 'flipkart', 'k215', '00:00:00', 'null', 1),
+(8, '23:19:52', '09/04/2018', 201712089, 'Myntra', 'k223', '00:00:00', 'null', 2);
 
 -- --------------------------------------------------------
 
@@ -210,22 +192,21 @@ INSERT INTO `courier` (`Id`, `In_time`, `In_date`, `Student_id`, `Courier_compan
 -- Table structure for table `gadget`
 --
 
-CREATE TABLE IF NOT EXISTS `gadget` (
-  `G_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `gadget` (
+  `G_id` int(11) NOT NULL,
   `G_name` varchar(20) NOT NULL,
   `G_code` int(11) NOT NULL,
-  `Student_id` int(11) NOT NULL,
-  PRIMARY KEY (`G_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+  `Student_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gadget`
 --
 
 INSERT INTO `gadget` (`G_id`, `G_name`, `G_code`, `Student_id`) VALUES
-(1, 'laptop', 11245687, 201712016),
+(1, 'laptop', 11245687, 201712082),
 (2, 'speaker', 20156789, 201712035),
-(3, 'cooler', 201596, 201712111);
+(3, 'cooler', 201596, 201712089);
 
 -- --------------------------------------------------------
 
@@ -233,8 +214,8 @@ INSERT INTO `gadget` (`G_id`, `G_name`, `G_code`, `Student_id`) VALUES
 -- Table structure for table `guest`
 --
 
-CREATE TABLE IF NOT EXISTS `guest` (
-  `Guest_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `guest` (
+  `Guest_id` int(11) NOT NULL,
   `Staff_id` int(11) NOT NULL,
   `Guest_name` varchar(30) NOT NULL,
   `Contact_no` varchar(11) NOT NULL,
@@ -242,19 +223,19 @@ CREATE TABLE IF NOT EXISTS `guest` (
   `Room_no` varchar(11) NOT NULL,
   `Add_line1` varchar(50) NOT NULL,
   `Add_line2` varchar(50) NOT NULL,
-  `City_id` int(11) NOT NULL,
-  PRIMARY KEY (`Guest_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+  `City_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `guest`
 --
 
 INSERT INTO `guest` (`Guest_id`, `Staff_id`, `Guest_name`, `Contact_no`, `Purpose`, `Room_no`, `Add_line1`, `Add_line2`, `City_id`) VALUES
-(1, 2, 'xyzw', '8520369874', 'convocation', 'j301', 'abcd', 'surat', 2),
-(2, 1, 'abcd', '8956231250', 'synapse', 'j105', 'maninagar', 'ahmeadbad', 1),
-(3, 2, 'monika', '8856254120', 'convocation', 'k205', 'vatva', 'ahmedabad', 1),
-(6, 1, 'Madhu', '9427711545', 'Ifest', 'k102', 'ashsndjn ', 'sjnc', 14);
+(7, 1, 'Stuti', '7537111484', 'Synapse', 'k302', 'Konark Society,near Railway Colony', 'visat', 1),
+(8, 1, 'Riya', '9876548520', 'Concurs', 'k215', 'b203 Shree Rang nanocity,', 'Sargashan', 3),
+(9, 1, 'Vrinda', '7418529635', 'iFest', 'k215', 'Shanti nagar Society', 'tarsali', 6),
+(10, 1, 'Nidhi', '8529637413', 'Synapse', 'k207', 'Vagheshwari Society', 'Karjan', 1),
+(11, 1, 'Radhika', '6549873210', 'Synapse', 'k207', 'Gujarati Society', 'Bandra', 14);
 
 -- --------------------------------------------------------
 
@@ -262,8 +243,8 @@ INSERT INTO `guest` (`Guest_id`, `Staff_id`, `Guest_name`, `Contact_no`, `Purpos
 -- Table structure for table `in_out`
 --
 
-CREATE TABLE IF NOT EXISTS `in_out` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `in_out` (
+  `Id` int(11) NOT NULL,
   `Student_id` int(11) NOT NULL,
   `In_time` time NOT NULL,
   `In_date` varchar(10) NOT NULL,
@@ -271,19 +252,19 @@ CREATE TABLE IF NOT EXISTS `in_out` (
   `Out_date` varchar(10) NOT NULL,
   `Place` varchar(20) NOT NULL,
   `Contact_no` varchar(11) NOT NULL,
-  `Name_of_relative` varchar(20) NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+  `Name_of_relative` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `in_out`
 --
 
 INSERT INTO `in_out` (`Id`, `Student_id`, `In_time`, `In_date`, `Out_time`, `Out_date`, `Place`, `Contact_no`, `Name_of_relative`) VALUES
-(1, 201712022, '14:34:41', 'null', '15:00:00', '28/03/2018', 'ahmedabad', '8956232189', 'vaneeta'),
-(2, 201712111, '18:00:00', '11/02/2018', '13:00:00', '08/02/2018', 'surat', '9988230158', 'ankita'),
-(3, 201712039, '07:17:00', '18/03/2018', '10:00:00', '16/03/2018', 'Bopal', '9426837158', 'nirvisha'),
-(4, 201712022, '00:00:00', 'null', '17:22:25', '31/03/2018', 'Baroda', '1234567891', 'Nilamasi');
+(5, 201712051, '22:42:28', '09/04/2018', '22:34:40', '09/04/2018', 'Surat', '9877899877', 'Nainesh'),
+(6, 201712052, '00:00:00', 'null', '22:43:56', '09/04/2018', 'Baroda', '9824335671', 'Jyoti'),
+(7, 201712102, '00:00:00', 'null', '22:46:06', '09/04/2018', 'Bihar', '8529879514', 'Krishma'),
+(8, 201712033, '00:00:00', 'null', '22:47:58', '09/04/2018', 'Rajkot', '7416548526', 'Bhavna'),
+(9, 201712089, '00:00:00', 'null', '22:54:58', '09/04/2018', 'Rajkot', '8529871234', 'nita');
 
 -- --------------------------------------------------------
 
@@ -291,10 +272,9 @@ INSERT INTO `in_out` (`Id`, `Student_id`, `In_time`, `In_date`, `Out_time`, `Out
 -- Table structure for table `room`
 --
 
-CREATE TABLE IF NOT EXISTS `room` (
+CREATE TABLE `room` (
   `Room_no` varchar(10) NOT NULL,
-  `No_of_occupants` int(11) NOT NULL,
-  PRIMARY KEY (`Room_no`)
+  `No_of_occupants` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -302,14 +282,11 @@ CREATE TABLE IF NOT EXISTS `room` (
 --
 
 INSERT INTO `room` (`Room_no`, `No_of_occupants`) VALUES
-('j101', 1),
-('j105', 0),
-('j207', 0),
-('j301', 0),
-('j311', 1),
-('k202', 0),
-('k205', 2),
-('k303', 0);
+('k209', 0),
+('k223', 0),
+('k204', 1),
+('k207', 1),
+('k302', 2);
 
 -- --------------------------------------------------------
 
@@ -317,26 +294,25 @@ INSERT INTO `room` (`Room_no`, `No_of_occupants`) VALUES
 -- Table structure for table `staff`
 --
 
-CREATE TABLE IF NOT EXISTS `staff` (
-  `Staff_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `staff` (
+  `Staff_id` int(11) NOT NULL,
   `Staff_name` varchar(30) NOT NULL,
   `Contact_no` varchar(11) NOT NULL,
   `Add_line1` varchar(50) NOT NULL,
   `Add_line2` varchar(50) NOT NULL,
   `City_id` int(11) NOT NULL,
   `Password` varchar(20) NOT NULL,
-  `Is_active` tinyint(1) NOT NULL,
-  PRIMARY KEY (`Staff_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+  `Is_active` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `staff`
 --
 
 INSERT INTO `staff` (`Staff_id`, `Staff_name`, `Contact_no`, `Add_line1`, `Add_line2`, `City_id`, `Password`, `Is_active`) VALUES
-(1, 'kapila', '8962584120', 'xyz', 'surat', 2, '123456789', 1),
-(2, 'anjana', '9962458201', 'maninagar', 'ahmedabad', 1, 'abcd1234', 0),
-(3, 'aunty3', '8965120489', 'vatva', 'ahmeadbad', 1, '123456', 0);
+(1, 'kapila', '8962584120', 'vraj society', 'surat', 2, '123456789', 1),
+(2, 'anjana', '9962458201', 'maninagar', 'ahmedabad', 1, '123456789', 1),
+(3, 'Nanda', '8965120489', 'vatva', 'ahmeadbad', 1, '123456789', 1);
 
 -- --------------------------------------------------------
 
@@ -344,14 +320,13 @@ INSERT INTO `staff` (`Staff_id`, `Staff_name`, `Contact_no`, `Add_line1`, `Add_l
 -- Table structure for table `staff_attendence`
 --
 
-CREATE TABLE IF NOT EXISTS `staff_attendence` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `staff_attendence` (
+  `Id` int(11) NOT NULL,
   `Staff_id` int(11) NOT NULL,
   `In_time` time NOT NULL,
   `Out_time` time NOT NULL,
-  `Date` varchar(10) NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+  `Date` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `staff_attendence`
@@ -368,7 +343,9 @@ INSERT INTO `staff_attendence` (`Id`, `Staff_id`, `In_time`, `Out_time`, `Date`)
 (8, 1, '18:47:03', '00:00:00', '03/04/2018'),
 (9, 1, '22:18:48', '22:19:57', '04/04/2018'),
 (10, 1, '13:14:13', '18:13:15', '05/04/2018'),
-(11, 1, '17:21:08', '00:00:00', '08/04/2018');
+(11, 1, '17:21:08', '00:00:00', '08/04/2018'),
+(12, 1, '20:21:32', '22:42:07', '09/04/2018'),
+(13, 2, '22:42:16', '00:00:00', '09/04/2018');
 
 -- --------------------------------------------------------
 
@@ -376,12 +353,11 @@ INSERT INTO `staff_attendence` (`Id`, `Staff_id`, `In_time`, `Out_time`, `Date`)
 -- Table structure for table `state`
 --
 
-CREATE TABLE IF NOT EXISTS `state` (
-  `State_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `state` (
+  `State_id` int(11) NOT NULL,
   `State_name` varchar(25) NOT NULL,
-  `Country_id` int(11) NOT NULL,
-  PRIMARY KEY (`State_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+  `Country_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `state`
@@ -404,7 +380,7 @@ INSERT INTO `state` (`State_id`, `State_name`, `Country_id`) VALUES
 -- Table structure for table `student`
 --
 
-CREATE TABLE IF NOT EXISTS `student` (
+CREATE TABLE `student` (
   `Student_id` int(11) NOT NULL,
   `First_name` varchar(20) NOT NULL,
   `Last_name` varchar(20) NOT NULL,
@@ -425,8 +401,7 @@ CREATE TABLE IF NOT EXISTS `student` (
   `P_add_line1` varchar(50) NOT NULL,
   `P_add_line2` varchar(50) NOT NULL,
   `p_city_id` int(10) NOT NULL,
-  `valid` tinyint(2) NOT NULL,
-  PRIMARY KEY (`Student_id`)
+  `valid` tinyint(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -434,10 +409,14 @@ CREATE TABLE IF NOT EXISTS `student` (
 --
 
 INSERT INTO `student` (`Student_id`, `First_name`, `Last_name`, `Father_name`, `Mother_name`, `Contact_no`, `Parent_no`, `Dob`, `Room_no`, `Course`, `Email`, `Password`, ` T_add_line1`, `T_add_line2`, `T_city_id`, `Blood_group`, `Ishmc`, `P_add_line1`, `P_add_line2`, `p_city_id`, `valid`) VALUES
-(201712022, 'Vaneeta', 'Malviya', 'abc', 'xyz', '9033126492', '1234567896', '1-1-1996', 'k205', 'mscit', '201712022@gmail.com', 'abcd', 'asdfg', 'asdfg 335009', 1, 'o positive', 1, 'asdfg', 'asdfg', 1, 1),
-(201712039, 'Rutvi', 'Shah', 'Birenkumar', 'Manisha', '9427711474', '9825647029', '04-01-1997', 'j311', 'MSC.IT', 'shahritu2111@gmail.com', 'rutvi', 'qwerty', 'zxcvb', 2, 'b positive', 0, 'qwerty', 'zxcvb', 2, 1),
-(201712102, 'devisha', 'surti', 'vinay', 'shefali', '8905106525', '9825647030', '09-03-1998', 'k215', 'MSc.IT', 'devi@gmail.com', 'abcd', 'skjfjj', 'snsfjenj', 1, 'b+', 0, 'c-25 prena viraj tower 1', 'near jodhpur gam', 1, 0),
-(201712111, 'nirvisha', 'soni', 'xyz', 'abc', '9851067209', '7625501298', '15/05/1996', 'k205', 'mscit', '201712111@gmail.com', '1234567', 'abcde', 'bhuj', 4, 'b negative', 0, 'abcdef', 'bhuj', 4, 0);
+(201712033, 'Bhakti', 'Shah', 'Alpesh', 'Rupal', '9726390447', '9726390447', '15/2/1996', 'k207', 'MscIT', 'bhaktishah920@gmail.com', 'abc', 'k-207 ,HoR Women,Daiict Campus', 'Daiict Road', 3, 'o+ve', 0, '2, Dhanraj Apt. ,', 'Kankaria', 1, 1),
+(201712035, 'Ami', 'Bhatt', 'vijay', 'hina', '7820070171', '7820070171', '7/05/1997', 'k223', 'MscIT', 'amibhatt7@gmail.com', 'abc', 'k-223 ,HoR Women,Daiict Campus', 'Daiict Road', 3, 'o positive', 0, 'nilkanth society,SBS colony', 'porbandar', 20, 0),
+(201712036, 'tulika', 'tulika', 'BM Prasad', 'kiran', '8765432190', '9638527410', '28/05/1994', 'k209', 'MscIT', 'tulika@gmail.com', 'abc', 'k-209 ,HoR Women,Daiict Campus', 'Daiict Road', 3, 'b positive', 0, 'shubroto park', 'palam', 11, 0),
+(201712039, 'Rutvi', 'Shah', 'Biren', 'Manisha', '9427711474', '9825647030', '04/01/1997', 'k302', 'MscIT', 'shahritu2111@gmail.com', 'rutvi', '1299/2 sector 5a', 'gandhinagar', 3, 'B+', 0, 'C-25 prena viraj tower-1', 'near jodhpur gam', 1, 1),
+(201712051, 'Shilpi', 'Soni', 'nainesh', 'bhavna', '9909960601', '9977899977', '4/2/1997', 'k204', 'MscIT', 'aapdebadha12@gmail.com', 'abc', 'k-204 ,HoR Women,Daiict Campus', 'Daiict Road', 3, 'a positive', 0, 'Satyakam Society,', 'nehrunagar', 1, 0),
+(201712052, 'Nisha', 'Parikh', 'Amit Parikh', 'Jyoti Parikh', '7623936347', '9824335671', '07/01/1997', 'k302', 'MscIT', 'nishaparikh71@gmail.com', 'nishu', 'k-302 ,HoR Women,Daiict Campus', 'Daiict Road', 6, 'b positive', 0, 'Ghadiyali pole,Kalidas Bhaijis Khadki,Opp. Jain De', 'Mandvi', 6, 1),
+(201712089, 'nidhi', 'vyas', 'mayur', 'nita', '7405197581', '8529637415', '6/1/1997', 'k223', 'MscIT', 'vyasnidhi@gmail.com', 'abc', 'k-223 ,HoR Women,Daiict Campus', 'Daiict Road', 3, 'o positive', 0, 'ganesh park', 'raiya road', 18, 1),
+(201712102, 'Devisha', 'Surti', 'Vinay', 'Shefali', '9409645400', '9409645400', '09/03/1997', 'K215', 'MscIT', 'devishasurti@gmail.com', 'devisha', 'k-302 ,HoR Women,Daiict Campus', 'Daiict Road', 3, 'B+', 0, 'D-13 shree hari park,b/s gopi vallabh tower', 'Satellite', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -445,11 +424,10 @@ INSERT INTO `student` (`Student_id`, `First_name`, `Last_name`, `Father_name`, `
 -- Table structure for table `type_of_complaint`
 --
 
-CREATE TABLE IF NOT EXISTS `type_of_complaint` (
-  `Type_id` int(11) NOT NULL AUTO_INCREMENT,
-  `Type_name` varchar(25) NOT NULL,
-  PRIMARY KEY (`Type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+CREATE TABLE `type_of_complaint` (
+  `Type_id` int(11) NOT NULL,
+  `Type_name` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `type_of_complaint`
@@ -470,24 +448,212 @@ INSERT INTO `type_of_complaint` (`Type_id`, `Type_name`) VALUES
 -- Table structure for table `visitor`
 --
 
-CREATE TABLE IF NOT EXISTS `visitor` (
-  `V_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `visitor` (
+  `V_id` int(11) NOT NULL,
   `V_name` varchar(30) NOT NULL,
   `Purpose` varchar(100) NOT NULL,
   `In_time` time NOT NULL,
   `Out_time` time NOT NULL,
-  `Date` varchar(10) NOT NULL,
-  PRIMARY KEY (`V_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+  `Date` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `visitor`
 --
 
 INSERT INTO `visitor` (`V_id`, `V_name`, `Purpose`, `In_time`, `Out_time`, `Date`) VALUES
-(1, 'xyz', 'broken table repair', '14:00:00', '15:00:00', '12/02/2018'),
-(2, 'abcd', 'electricity issue', '09:00:00', '14:00:00', '15/03/2018'),
-(3, 'abcde', 'internet issue', '17:00:00', '19:00:00', '02/02/2018'),
-(4, 'ghi', 'cleaning floor', '06:00:00', '10:00:00', '12/02/2018'),
-(8, 'vidvata', 'electricity', '08:59:08', '15:44:43', '27/03/2018'),
-(9, 'rutvi', 'electricity', '15:06:17', '00:00:00', '31/03/2018');
+(10, 'Raman', 'Electricity', '20:39:24', '00:00:00', '09/04/2018'),
+(11, 'Raju', 'Carpenter', '20:39:58', '00:00:00', '09/04/2018'),
+(12, 'Mahesh', 'plumber', '20:40:26', '00:00:00', '09/04/2018'),
+(13, 'Manoj', 'Electricity', '20:41:18', '20:41:35', '09/04/2018'),
+(14, 'Suresh', 'plumber', '20:42:09', '00:00:00', '09/04/2018');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `attendence`
+--
+ALTER TABLE `attendence`
+  ADD PRIMARY KEY (`Att_id`);
+
+--
+-- Indexes for table `bulletin`
+--
+ALTER TABLE `bulletin`
+  ADD PRIMARY KEY (`Image_id`);
+
+--
+-- Indexes for table `checkout`
+--
+ALTER TABLE `checkout`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `city`
+--
+ALTER TABLE `city`
+  ADD PRIMARY KEY (`City_id`);
+
+--
+-- Indexes for table `complaint`
+--
+ALTER TABLE `complaint`
+  ADD PRIMARY KEY (`complaint_id`);
+
+--
+-- Indexes for table `country`
+--
+ALTER TABLE `country`
+  ADD PRIMARY KEY (`Country_id`);
+
+--
+-- Indexes for table `courier`
+--
+ALTER TABLE `courier`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `gadget`
+--
+ALTER TABLE `gadget`
+  ADD PRIMARY KEY (`G_id`);
+
+--
+-- Indexes for table `guest`
+--
+ALTER TABLE `guest`
+  ADD PRIMARY KEY (`Guest_id`);
+
+--
+-- Indexes for table `in_out`
+--
+ALTER TABLE `in_out`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `room`
+--
+ALTER TABLE `room`
+  ADD PRIMARY KEY (`Room_no`),
+  ADD KEY `No_of_occupants` (`No_of_occupants`);
+
+--
+-- Indexes for table `staff`
+--
+ALTER TABLE `staff`
+  ADD PRIMARY KEY (`Staff_id`);
+
+--
+-- Indexes for table `staff_attendence`
+--
+ALTER TABLE `staff_attendence`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `state`
+--
+ALTER TABLE `state`
+  ADD PRIMARY KEY (`State_id`);
+
+--
+-- Indexes for table `student`
+--
+ALTER TABLE `student`
+  ADD PRIMARY KEY (`Student_id`);
+
+--
+-- Indexes for table `type_of_complaint`
+--
+ALTER TABLE `type_of_complaint`
+  ADD PRIMARY KEY (`Type_id`);
+
+--
+-- Indexes for table `visitor`
+--
+ALTER TABLE `visitor`
+  ADD PRIMARY KEY (`V_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `attendence`
+--
+ALTER TABLE `attendence`
+  MODIFY `Att_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT for table `bulletin`
+--
+ALTER TABLE `bulletin`
+  MODIFY `Image_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `checkout`
+--
+ALTER TABLE `checkout`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `city`
+--
+ALTER TABLE `city`
+  MODIFY `City_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+--
+-- AUTO_INCREMENT for table `complaint`
+--
+ALTER TABLE `complaint`
+  MODIFY `complaint_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `country`
+--
+ALTER TABLE `country`
+  MODIFY `Country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `courier`
+--
+ALTER TABLE `courier`
+  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `gadget`
+--
+ALTER TABLE `gadget`
+  MODIFY `G_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `guest`
+--
+ALTER TABLE `guest`
+  MODIFY `Guest_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+--
+-- AUTO_INCREMENT for table `in_out`
+--
+ALTER TABLE `in_out`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `staff`
+--
+ALTER TABLE `staff`
+  MODIFY `Staff_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `staff_attendence`
+--
+ALTER TABLE `staff_attendence`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+--
+-- AUTO_INCREMENT for table `state`
+--
+ALTER TABLE `state`
+  MODIFY `State_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `type_of_complaint`
+--
+ALTER TABLE `type_of_complaint`
+  MODIFY `Type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `visitor`
+--
+ALTER TABLE `visitor`
+  MODIFY `V_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -46,9 +46,9 @@
 	 <div class="form-group row">
 
 
-        <label for="firstName" class="col-sm-4 col-form-label">First Name</label>
+        <label for="Name" class="col-sm-4 col-form-label">First Name</label>
         <div class="col-sm-8">
-          <input class="form-control" name="firstName" type="text" placeholder="First Name"  pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
+          <input class="form-control" name="firstName" type="text" placeholder="FirstName"  pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
         </div>
     </div>
 
