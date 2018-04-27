@@ -66,11 +66,11 @@
      <div class="form-group row">
 			<label for="dateOfBirth" class="col-sm-4 col-form-label">Date of Birth</label>
 			<div class="col-sm-8">
-				<input class="form-control" name="studentDOB" type="text" placeholder="Date of Birth '11/12/13' format" required>
+				<input class="form-control" name="studentDOB" type="text" placeholder="Date of Birth 'dd/mm/yy' format" pattern="\d{1,2}/\d{1,2}/\d{4}" required>
 			</div>
 		</div>	
 	<div class="form-group row">
-			<label for="studentRoomNo" class="col-sm-4 col-form-label">Room NO</label>
+			<label for="studentRoomNo" class="col-sm-4 col-form-label">Room No</label>
 			<div class="col-sm-8">
 				<input class="form-control" name="studentroomno" type="text" placeholder="Room Number" pattern="[J-Kj-k]{1}[0-9]{3}" title="Room Number e.g.(k306)" required>
 			</div>

@@ -78,9 +78,9 @@ include('header.php');
 
 					
 					<td>
-					<a href="<?php echo site_url('studentdetail/approvestudent/'.$student->Student_id);?> "><button type="button" class="form-control btn btn-primary " >Approve</button></a>
+					<a href="<?php echo site_url('studentdetail/approvestudent/'.$student->Student_id);?> "><button type="button" class="form-control btn btn-primary">Approve</button></a>
 
-					<a href="<?php echo site_url('studentdetail/disapprovestudent/'.$student->Student_id);?> "><button type="button" class="form-control btn btn-danger " >Disapprove</button></a>
+					<a href="<?php echo site_url('studentdetail/disapprovestudent/'.$student->Student_id);?> "><button type="button" class="form-control btn btn-danger" >Disapprove</button></a>
 
 				</td>
 	

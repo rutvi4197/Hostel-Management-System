@@ -46,9 +46,9 @@
       </div>
     </div>
       <div class="form-group row">
-      <label for="studentRoomNo" class="col-sm-4 col-form-label">Room NO</label>
+      <label for="studentRoomNo" class="col-sm-4 col-form-label">Room No</label>
       <div class="col-sm-8">
-        <input class="form-control" name="studentRoomNo" type="text" pattern= "[J-Kj-k]{1}[0-9]{3}" title="Room Number e.g.(k306)" required>
+        <input class="form-control" name="studentRoomNo" type="text" pattern= "[J-Kj-k]{1}[0-9]{3}" placeholder="Room Number" title="Room Number e.g.(k306)" required>
       </div>
     </div>
   <div class="form-group row">

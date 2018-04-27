@@ -29,8 +29,8 @@
         <p><input type="text" placeholder="ID" name="id"></p>
         <p><input type="password" placeholder="Password" name="password"></p>
         <p><input type="submit" value="Log in">
-            <a href="<?php echo site_url('registration'); ?>" class="pull-left"  style="color:#000051;font-size:10px;">Forgot Password?</a>
-            <a href="<?php echo site_url('registration'); ?>" class="pull-right"  style="color:#000051;font-size:10px;">Sign Up Here</a>
+            <a href="<?php echo site_url('registration'); ?>" class="pull-left"  style="color:#000051;font-size:10px;text-decoration:none;">Forgot Password?</a>
+            <a href="<?php echo site_url('registration'); ?>" class="pull-right"  style="color:#000051;font-size:10px;text-decoration:none;">Sign Up Here</a>
         </p>
         </form>
         </div>

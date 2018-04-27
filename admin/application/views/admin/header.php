@@ -28,17 +28,17 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-       <li ><a href="<?php echo site_url('home'); ?>"><span style="padding-right:5px;" class="glyphicon glyphicon-home"></span>HOME</a></li>
+       <li ><a href="<?php echo site_url('home'); ?>"><span style="padding-right:3px;" class="glyphicon glyphicon-home"></span>HOME</a></li>
 
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="fa fa-500px"></span>Attendence<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:3px;" class="fa fa-500px"></span>Attendence<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo site_url('attendence'); ?>">Absent Student Record</a></li>
             <li><a href="<?php echo site_url('attendence/inoutentry'); ?>"<?php echo site_url('orderhistory'); ?>>IN/OUT Entry Record</a></li> 
           </ul>
         </li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-info-sign"></span>Complain<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:3px;" class="glyphicon glyphicon-info-sign"></span>Complain<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo site_url('complain/viewcomplain'); ?>">View Complain</a></li>
             <li><a href="<?php echo site_url('complain/allcomplain'); ?>">Status of Complain</a></li> 
@@ -46,7 +46,7 @@
         </li>
 
          <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-info-sign"></span>Guest<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:3px;" class="glyphicon glyphicon-info-sign"></span>Guest<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo site_url('guest/add'); ?>">Add Guest</a></li>
             <li><a href="<?php echo site_url('guest/view'); ?>">View Guest</a></li> 
@@ -54,7 +54,7 @@
         </li>
 
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-wrench"></span>Services<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:3px;" class="glyphicon glyphicon-wrench"></span>Services<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo site_url('service/add'); ?>">Add Service</a></li>
             <li><a href="<?php echo site_url('service/view'); ?>">View Service</a></li> 
@@ -62,7 +62,7 @@
         </li>
 
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-briefcase"></span>Courier<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:3px;" class="glyphicon glyphicon-briefcase"></span>Courier<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo site_url('courier/add'); ?>">Add Courier</a></li>
             <li><a href="<?php echo site_url('courier/view'); ?>">View Courier</a></li> 
@@ -70,7 +70,7 @@
         </li>
 
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-user"></span>Student<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:3px;" class="glyphicon glyphicon-user"></span>Student<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo site_url('studentdetail/approval') ?>">Student approval</a></li>
             <li><a href="<?php echo site_url('studentdetail/leave') ?>">Leave approval</a></li>
@@ -81,15 +81,23 @@
           
 
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:5px;" class="glyphicon glyphicon-stats"></span>Add Attendence<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:3px;" class="glyphicon glyphicon-stats"></span>Add Attendence<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo site_url('addattendence/dailyentry') ?>">Daily Attendance</a></li>
             <li><a href="<?php echo site_url('addattendence/inout') ?>">IN/OUT Entry</a></li> 
           </ul>
         </li>
 
+         <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:3px;" class="glyphicon glyphicon-info-sign"></span>Feedback<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="<?php echo site_url('Feedback'); ?>">View Feedback</a></li>
+          </ul>
+        </li>
+
+
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i style="padding-right:5px;" class="fa fa-users"></i>Admin<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i style="padding-right:3px;" class="fa fa-users"></i>Admin<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo site_url('admin/staff'); ?>">Add Staff</a></li>
             <li><a href="<?php echo site_url('admin/view'); ?>">View Staff</a></li> 
@@ -97,7 +105,7 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="<?php echo site_url('login/logout'); ?>"><span style="padding-right:5px;" class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+        <li><a href="<?php echo site_url('login/logout'); ?>"><span style="padding-right:3px;" class="glyphicon glyphicon-log-out"></span>Logout</a></li>
       </ul>
   </div><!-- /.navbar-collapse -->
 </nav>  

@@ -29,9 +29,9 @@
 		<div class="col-sm-10 col-md-10">
 		
 	 <div class="form-group row">
-        <label for="studentName" class="col-sm-4 col-form-label">Student Name</label>
+        <label for="studentName" class="col-sm-4 col-form-label">Purpose</label>
         <div class="col-sm-8">
-          <input class="form-control" name="studentName" type="text" placeholder="Student Name" pattern="^(?![\s.]+$)[a-zA-Z\s.]*$" title="Invalid input" required>
+          <input class="form-control" name="studentName" type="text" placeholder="Purpose" title="Invalid input" required>
         </div>
     </div>
 		<div class="form-group row">

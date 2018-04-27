@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Status of Complain</title>
+		<title>Feedback</title>
 <script  src="<?php echo base_url(); ?>js/jquery-1.12.3.js" type="text/javascript"></script> 
   <link rel="Stylesheet" href="<?php echo base_url(); ?>bootstrapcss/jquery.dataTables.min.css" /> 
 <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-1.12.3.js"></script>
@@ -44,9 +44,9 @@ include('header.php');
         });
     </script>
     <div class="row">
-    	<div class="col-md-2 col-sm-2">
+    	<div class="col-md-3 col-sm-3">
     	</div>
-    	<div class="col-md-8 col-sm-8">
+    	<div class="col-md-6 col-sm-6">
 			<div class="page-container">
 			<div class="left-content">
 				<div class="inner-content">
@@ -54,7 +54,7 @@ include('header.php');
 					<div class="outter-wp">
 						<div class="sub-heard-part"></div>
 							<div class="graph-visual tables-main">
-								<h3 class="inner-title two"><center><b>Solved Complaints</b></center></h3>
+								<h3 class="inner-tittle two"><center><b>View Feedback<b></font></h3>
 									<div class="graph">
 										<div class="tables" >		
 									<br>	
@@ -62,27 +62,26 @@ include('header.php');
 				
 				<thead>
 				<tr class="active" style="font-size: 3;color:#000051 ">
-					<th><b>Complain type</b></th>
 					<th><b>Student Id</b></th>
-					<th><b>Room No</b></th>
-					<th><b>Date</b></th>
+					<th><b>Purpose</b></th>
+					<th><b>Feedback</b></th>
 					
 				</tr>
 				</thead>
 				<tbody>
-                    <?php 
+			 <?php 
+               foreach($absentstudent as $absentstudent):
+               
+              ?>        
+					<tr>
+					<td><?php echo $absentstudent->Student_id  ?></td>
+					<td><?php echo $absentstudent->First_name  ?></td>
+					<td><?php echo $absentstudent->Room_no  ?></td>
+					
+					</tr>
 
-                        foreach ($complain as $complain) :
-                    ?>
-                	<tr>
-                        
-                		<td><?php echo $complain->Type_name ?></td>
-                		<td><?php echo $complain->Student_id ?></td>
-                		<td><?php echo $complain->Room_no ?></td>
-                		<td><?php echo $complain->Date ?></td>
-                		
-                	</tr>
-                	<?php endforeach; ?>
+					  <?php endforeach;?>
+                
 			</tbody>
 			</table> 
 			
@@ -94,7 +93,7 @@ include('header.php');
 			</div>
 		</div>
 	</div>
-	<div class="col-md-2">
+	<div class="col-md-3">
 	</div>
 	</div>
 </body>
