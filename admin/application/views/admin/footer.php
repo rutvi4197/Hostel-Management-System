@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12">
-                    <h3>Women's HOR</h3>
+                    <h3>HoR Women</h3>
                     <ul>
                         <li> <a href="#"> Absent Student Record</a> </li>
                         <li> <a href="#"> View Complain</a> </li>

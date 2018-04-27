@@ -23,15 +23,15 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <h3>Warden</h3>
                     <ul>
-                        <li>Shweta garg</li>
+                        <li>Prof.Shweta garg : 079-3051-0627</li>
                         
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <h3>Hostel Supervisor</h3>
                     <ul>
-                        <li>Parmar : +91987654321</li>
-                        <li>Sawant : +91987654321</li>
+                        <li>Mr.Jitendra Parmar : 09328994140</li>
+                        <li>Mr.Sawan Kumar : 09328994142</li>
                         
                     </ul>
                 </div>

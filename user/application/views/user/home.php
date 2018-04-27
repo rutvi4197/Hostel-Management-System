@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Women's Hall of Residence</title>
+	<title>Women's HOR</title>
 	<link href="<?php echo base_url(); ?>css/w3.css" rel="stylesheet" type="text/css" >
   
 </head>
