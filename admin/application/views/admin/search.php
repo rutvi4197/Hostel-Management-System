@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
 <HTML>
 	<head>
-		<title>Women's Hall of Residence	
-		</title>
+		<title>Women's HOR</title>
 	</head>
 	<body>
 	

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Status of Complain</title>
+		<title>Women's HOR</title>
 <script  src="<?php echo base_url(); ?>js/jquery-1.12.3.js" type="text/javascript"></script> 
   <link rel="Stylesheet" href="<?php echo base_url(); ?>bootstrapcss/jquery.dataTables.min.css" /> 
 <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-1.12.3.js"></script>

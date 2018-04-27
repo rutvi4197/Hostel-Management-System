@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Attendance</title>
+		<title>Women's HOR</title>
 <script  src="<?php echo base_url(); ?>js/jquery-1.12.3.js" type="text/javascript"></script> 
   <link rel="Stylesheet" href="<?php echo base_url(); ?>bootstrapcss/jquery.dataTables.min.css" /> 
 <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-1.12.3.js"></script>
@@ -22,9 +22,9 @@ include('header.php');
             $(function () {
 
             $('#dataTable').dataTable({
-               // "bJQueryUI": true,
+             
                 "sPaginationType": "full_numbers",
-        //"pageLength": 1
+        
             });
 
             $('#chk-all').click(function () {
@@ -54,7 +54,7 @@ include('header.php');
 								<h3 class="inner-tittle two"><center><b>Out Entry Student details</b></center></h3>
 									<div class="graph">
 										<div class="tables" >		
-									<br>	
+									<br>
 				<table class="table table-bordered" id="dataTable">
 				
 				<thead>
