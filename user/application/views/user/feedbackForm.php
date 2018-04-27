@@ -31,7 +31,7 @@
 	 <div class="form-group row">
         <label for="studentName" class="col-sm-4 col-form-label">Purpose</label>
         <div class="col-sm-8">
-          <input class="form-control" name="studentName" type="text" placeholder="Purpose" title="Invalid input" required>
+          <input class="form-control" name="purpose" type="text" placeholder="Purpose" title="Invalid input" required>
         </div>
     </div>
 		<div class="form-group row">

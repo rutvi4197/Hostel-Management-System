@@ -91,7 +91,7 @@
          <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:3px;" class="glyphicon glyphicon-info-sign"></span>Feedback<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="<?php echo site_url('Feedback'); ?>">View Feedback</a></li>
+            <li><a href="<?php echo site_url('feedback'); ?>">View Feedback</a></li>
           </ul>
         </li>
 

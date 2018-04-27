@@ -70,13 +70,13 @@ include('header.php');
 				</thead>
 				<tbody>
 			 <?php 
-               foreach($absentstudent as $absentstudent):
+               foreach($feedback as $feedback):
                
               ?>        
 					<tr>
-					<td><?php echo $absentstudent->Student_id  ?></td>
-					<td><?php echo $absentstudent->First_name  ?></td>
-					<td><?php echo $absentstudent->Room_no  ?></td>
+					<td><?php echo $feedback->Student_id  ?></td>
+					<td><?php echo $feedback->Purpose  ?></td>
+					<td><?php echo $feedback->Description  ?></td>
 					
 					</tr>
 
