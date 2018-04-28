@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2018 at 07:56 PM
+-- Generation Time: Apr 27, 2018 at 08:32 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -324,10 +324,10 @@ INSERT INTO `room` (`Room_no`, `No_of_occupants`) VALUES
 ('j311', 1),
 ('j312', 1),
 ('j313', 1),
-('k204', 1),
 ('k207', 1),
 ('k209', 1),
 ('k215', 1),
+('k204', 2),
 ('k223', 2),
 ('k302', 2);
 
