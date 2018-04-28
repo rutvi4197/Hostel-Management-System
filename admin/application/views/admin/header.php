@@ -41,7 +41,7 @@
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="padding-right:3px;" class="glyphicon glyphicon-info-sign"></span>Complain<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo site_url('complain/viewcomplain'); ?>">View Complain</a></li>
-            <li><a href="<?php echo site_url('complain/allcomplain'); ?>">Status of Complain</a></li> 
+            <li><a href="<?php echo site_url('complain/allcomplain'); ?>">Solved Complaint</a></li> 
           </ul>
         </li>
 
@@ -99,7 +99,7 @@
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i style="padding-right:3px;" class="fa fa-users"></i>Admin<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="<?php echo site_url('admin/staff'); ?>">Add Staff</a></li>
+           <!--  <li><a href="<?php echo site_url('admin/staff'); ?>">Add Staff</a></li> -->
             <li><a href="<?php echo site_url('admin/view'); ?>">View Staff</a></li> 
           </ul>
         </li>

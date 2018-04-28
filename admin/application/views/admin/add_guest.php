@@ -34,7 +34,7 @@
         </div>
     </div>
   <div class="form-group row">
-        <label for="guestContact" class="col-sm-4 col-form-label">Contact NO</label>
+        <label for="guestContact" class="col-sm-4 col-form-label">Contact No</label>
         <div class="col-sm-8">
           <input type="text" class="form-control" name="guestContact" placeholder="Contact Number" pattern="[0-9]{10}" title="Ten digit phone number" required>
         </div>

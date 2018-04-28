@@ -64,9 +64,9 @@ include('header.php');
           <th><b>Contact No</b></th>
           <th><b>Purpose</b></th>
           <th><b>Room No</b></th>
-          <th><b>Addree</b></th>
+          <th><b>Addrees</b></th>
           <th><b>City</b></th>
-          <th><b>Staff name</b></th>
+          
          
 
           
@@ -82,9 +82,9 @@ include('header.php');
           <td><?php echo $guest->Contact_no  ?></td>
           <td><?php echo $guest->Purpose  ?></td>
           <td><?php echo $guest->Room_no ?></td>
-          <td><?php echo $guest->Add_line1  ?></td>
+          <td><?php echo $guest->Add_line1 ?></td>
           <td><?php echo $guest->City_name  ?></td>
-          <td><?php echo $guest->Staff_name  ?></td>
+          
           
           
           </tr>
