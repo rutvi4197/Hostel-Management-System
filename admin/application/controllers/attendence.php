@@ -6,7 +6,7 @@ class Attendence extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('Studentattendence');
-		$date=date('d/m/Y');
+		$date=date('d/m/Y',time()-86400);
 		$arr['absentstudent']=$this->Studentattendence->absentstudentdetail($date);
 
 

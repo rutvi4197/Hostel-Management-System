@@ -37,7 +37,7 @@
           </ul>
         </li>
 
-        <li class="nav-item"><a href="<?php echo site_url('hlf') ?>" class="nav-link"><span style="padding-right:5px;" class="glyphicon glyphicon-home"></span>HLF</a></li>
+        <li class="nav-item"><a href="<?php echo site_url('hlf') ?>" class="nav-link"><span style="padding-right:5px;" class="glyphicon glyphicon-home"></span>Hostel Leaving Form</a></li>
 
         <li class="nav-item"><a href="<?php echo site_url('feedback') ?>"><span style="padding-right:5px;" class="fa fa-share-square"></span>Feedback</a></li>
       

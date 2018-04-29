@@ -37,17 +37,17 @@
     var chart = new CanvasJS.Chart("att",
     {
       title:{
-        text: "Attendence"
+        text: "Attendance"
       },
       data: [
 
       {
         dataPoints: [
-        { x: 1, y: 300, label: "Date1"},
-        { x: 2, y: 150,  label: "Date2" },
-        { x: 3, y: 201,  label: "Date3"},
-        { x: 4, y: 320,  label: "Date4"},
-        { x: 5, y: 343,  label: "Date5"},
+        { x: 1, y: 9, label: "28 Apr"},
+        { x: 2, y: 2,  label: "27 Apr"},
+        { x: 3, y: 0,  label: "26 Apr"},
+        { x: 4, y: 6,  label: "25 Apr"},
+        { x: 5, y: 2,  label: "24 Apr"},
         ]
       }
       ]
@@ -64,11 +64,11 @@
 
       {
         dataPoints: [
-        { x: 1, y: 300, label: "Date1"},
-        { x: 2, y: 150,  label: "Date2" },
-        { x: 3, y: 201,  label: "Date3"},
-        { x: 4, y: 320,  label: "Date4"},
-        { x: 5, y: 343,  label: "Date5"},
+        { x: 1, y: 2, label: "28 Apr"},
+        { x: 2, y: 1,  label: "27 Apr"},
+        { x: 3, y: 2,  label: "26 Apr"},
+        { x: 4, y: 0,  label: "25 Apr"},
+        { x: 5, y: 3,  label: "24 Apr"},
         ]
       }
       ]
@@ -98,10 +98,10 @@ include_once('header.php');
 		function drawChart() {
 		  var data = google.visualization.arrayToDataTable([
 		  ['Complaints', 'Number per Day'],
-		  ['Electrical', 8],
-		  ['Maintenance', 2],
-		  ['Carpenter', 4],
-		  ['Other', 2],
+		  ['Electrical', 2],
+		  ['Cleaning', 3],
+		  ['Carpenter', 1],
+		  ['Urgent', 3],
 
 		]);
 		/*----------------------------*/	
@@ -123,7 +123,7 @@ include_once('header.php');
 				  		$totalstudent=$total->cnt;
 				  	}
 				   ?>
-				  <li class="list-group-item">Total Present<span class="badge badge-light"><?php echo $totalstudent; ?></span></li>
+				  <li class="list-group-item">Total Student<span class="badge badge-light"><?php echo $totalstudent; ?></span></li>
 				   <?php
 				  	foreach ($out as $out) {
 				  		$outstudent=$out->out;

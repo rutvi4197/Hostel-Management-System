@@ -5,7 +5,7 @@ class Home extends CI_Controller {
 	
 	public function index()
 	{
-		$date=date('d/m/Y');
+		$date=date('d/m/Y',time()-86400);
 		$this->load->model('homepage');
 		$arr['total']=$this->homepage->gettotalstudent();
 
