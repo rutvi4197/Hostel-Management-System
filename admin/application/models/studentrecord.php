@@ -42,12 +42,20 @@ class Studentrecord extends CI_Model
 		$q=$this->db->query("update student set valid=1 where Student_id='$id'");
 		if($this->db->affected_rows() > 0)
 		{
+<<<<<<< HEAD
 			return true;	
 		}
 			else
 		{
-				return false;
+=======
+				return true;
 		}
+			else
+			{
+>>>>>>> cf05906e8f858cf0495bcd1c4082a1a2cee29ebc
+				return false;
+			}
+		
 	}
 
 	public function deletestudent($id)
