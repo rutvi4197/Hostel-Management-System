@@ -1,14 +1,18 @@
-<<<<<<< HEAD
+# Hostel-Management-System
+Hostel Management System for DA-IICT 
 # CodeIgniter 2
 Open Source PHP Framework (originally from EllisLab)
 
-For more info, please refer to the user-guide at http://www.codeigniter.com/userguide2/  
-(also available within the download package for offline use)
+HTML5 CSS3 Javascript Bootstrap
 
-**WARNING:** *CodeIgniter 2.x is no longer under development and only receives security patches until October 31st, 2015.
-Please update your installation to the latest CodeIgniter 3.x version available
-(upgrade instructions [here](http://www.codeigniter.com/userguide3/installation/upgrade_300.html)).*
-=======
-# Hostel-Management-System
-Hostel Management System for DA-IICT 
->>>>>>> c3ec9073efde234567533a23be2c253b7d556caf
+Hostel management system is basically manage girl hostel activity in the DA-IICT.
+Feature:
+Attendance System
+In/Out Entery for girls
+Hostel Registration 
+Hostel Leaving request
+Complaint about hostel
+Manage Complaint level
+Courier service management
+Warden Attendance management
+
